@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仓库</title>
+    <link rel="stylesheet" href="BOX/CSS/Main.css">
+    <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header-2">
+        <img src="BOX/Photo/橘橘博客.png" height="28" width="120" alt="LOGO">
+        <div class="header-2_1">
+            <img src="BOX/Photo/首页.png" height="30" width="30" alt="首页">
+            <a href="index.html">首页</a>
+        </div>
+        <div class="header-2_2">
+            <img src="BOX/Photo/仓库.png" height="25" width="25" alt="仓库">
+            <a href="Store.html">仓库</a>
+        </div>
+        <div class="header-2_3">
+            <img src="BOX/Photo/人像.png" height="25" width="25" alt="人像">
+            <a href="Reg.html">用户</a>
+        </div>
+        <div class="header-2_4">
+            <img src="BOX/Photo/爱心.png" height="25" width="25" alt="爱心">
+            捐助
+        </div>
+        <div class="header-2_5">
+            <img src="BOX/Photo/链接.png" height="25" width="25" alt="链接">
+            <a href="Link.html">链接</a>
+        </div>
+    </div>
+    <a href="https://github.com/LuoTianOrange" target="_blank">
+        <div class="header-1">
+            <img src="BOX/Photo/github.png" height="30" width="30" alt="GithubLogo">
+            <div class="text-1">Github</div>
+        </div>
+    </a>
+</div>
+<div class="body1">
+    <h1 class="text-3">标题</h1>
+</div>
+<div class="body-3_5" id="gotoTop">
+    <a>返回<br>顶部</a>
+</div>
+<div class="box">
+    <div class="box1">
+        <div class="box1-1">
+            测试
+        </div>
+        <div class="box1-1">
+            个人主页<br><br>
+            <div class="box1-1-1"><img src="BOX/Photo/哔哩哔哩动画1.png" height="20px">&nbsp B站</div>
+            <div class="box1-1-1"><img src="BOX/Photo/BOOTH1.png" height="20px" class="rad">&nbsp BOOTH</div>
+            <div class="box1-1-1"><img src="BOX/Photo/MCBBS.ico" height="20px" class="rad">&nbsp MCBBS</div>
+            <div class="box1-1-1"><img src="BOX/Photo/萌娘百科.ico" height="20px" class="rad">&nbsp 萌娘百科</div>
+            <div class="box1-1-1"><img src="BOX/Photo/MC百科.ico" height="20px" class="rad">&nbsp MC百科</div>
+        </div>
+        <div class="box1-1">
+            <div class="box1-1-1"><img src="BOX/Photo/ACFUN.ico" height="20px" class="rad">&nbsp A站</div>
+            <div class="box1-1-1"><img src="BOX/Photo/github.png" height="20px" class="rad">&nbsp Github</div>
+
+        </div>
+    </div>
+</div>
+<div class="background"></div>
+<script>
+    function gotoTop(minHeight) {
+
+        // 定义点击返回顶部图标后向上滚动的动画
+        $("#gotoTop").click(
+            function () {
+                $('html,body').animate({scrollTop: '0px'}, 'slow');
+            })
+
+        // 获取页面的最小高度，无传入值则默认为600像素
+        minHeight ? minHeight = minHeight : minHeight = 300;
+
+        // 为窗口的scroll事件绑定处理函数
+        $(window).scroll(function () {
+
+            // 获取窗口的滚动条的垂直滚动距离
+            var s = $(window).scrollTop();
+
+            // 当窗口的滚动条的垂直距离大于页面的最小高度时，让返回顶部图标渐现，否则渐隐
+            if (s > minHeight) {
+                $("#gotoTop").fadeIn(500);
+            } else {
+                $("#gotoTop").fadeOut(500);
+            }
+            ;
+        });
+    };
+    gotoTop();
+</script>
+</body>
+</html>

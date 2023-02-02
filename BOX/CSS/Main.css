@@ -1,0 +1,289 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.header{
+    height: 30px;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+.header-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header-2{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 12%;
+}
+.header-2_1{
+    position: relative;
+    left: 20%;
+    display: flex;
+    align-items: center;
+}
+.header-2_2{
+    position: relative;
+    left: 40%;
+    display: flex;
+    align-items: center;
+}
+.header-2_3{
+    position: relative;
+    left: 60%;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration : none;
+}
+.header-2_4{
+    position: relative;
+    left: 80%;
+    display: flex;
+    align-items: center;
+}
+.header-2_5{
+    position: relative;
+    left: 100%;
+    display: flex;
+    align-items: center;
+}
+.img-1{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 5%;
+
+}
+.text-1{
+    width: 100px;
+    padding: 6px;
+}
+.text-2{
+    color: darkorange;
+    font-style: normal;
+    font-family: 微软雅黑;
+    font-size: 20px;
+}
+.text-3{
+    text-decoration: none;
+    font-size: 60px;
+    font-family: "仓耳渔阳体 W03";
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 2%;
+}
+.body-1{
+    width: 1200px;
+    height: 800px;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    top: 90px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.body-2{
+    width: 70%;
+    position: relative;
+    right: 25px;
+}
+.body-2_1{
+    background-color: white;
+    height: 200px;
+    position: relative;
+    padding: 3%;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+}
+.body-2_2{
+    background-color: white;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 5%;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+}
+.body-2_3{
+    background-color: white;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 10%;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+}
+.body-2_2_1{
+    display: flex;
+    overflow: hidden;
+    padding: 3%;
+    flex-direction: column;
+}
+.body-3{
+    width: 25%;
+    position: relative;
+    right: 3%;
+}
+.body-3_1{
+    top: 3%;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+}
+.body-3_1_1{
+    position: relative;
+    padding: 10px;
+}
+.body-3_2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 3%;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    font-style: normal;
+    color: grey;
+}
+.body-3_3{
+    position: relative;
+    height: 400px;
+    max-height: 30%;
+    top: 5%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+}
+.body-3_31{
+    padding: 5%;
+}
+.body-3_3_1{
+    font-family: 微软雅黑;
+    font-size: 20px;
+    font-style: normal;
+}
+.body-3_4{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 12px;
+    position: fixed;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.body-3_5{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 12px;
+    position: fixed;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    right: 5%;
+}
+.Canvas {
+    position: fixed;
+    left: -50px;
+    bottom: -50px;
+    z-index: 9;
+}
+.background{
+    background-image: url("/BOX/Photo/nacho.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    opacity: 40%;
+}
+.body1{
+    position: relative;
+    width: 100%;
+    height: 2000px;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+.box1{
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box1-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 3%;
+    flex-direction: column;
+    font-family: "Microsoft YaHei", 微软雅黑, 宋体, sans-serif;
+    font-size: 16px;
+    color: #696969;
+}
+.box1-1-1{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;;
+    position: relative;
+    font-family: "Microsoft YaHei", 微软雅黑, 宋体, sans-serif;
+    font-size: 15px;
+    color: #696969;
+}
+.rad{
+    border-radius:50%
+}
+.bilibili{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.booth{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 10%;
+}
