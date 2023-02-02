@@ -4,7 +4,7 @@ html, body {
 }
 
 a {
-    color: black;
+    color: #696969;
     text-decoration: none
 }
 
@@ -168,4 +168,9 @@ a:hover {
     position: fixed;
     top: 0;
     opacity: 40%;
+}
+.a1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
