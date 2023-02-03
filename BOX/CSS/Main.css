@@ -367,10 +367,6 @@ a {
     color: #696969;
 }
 
-.rad {
-    border-radius: 50%
-}
-
 .main-page {
     width: 100%;
     height: 100%;
@@ -396,10 +392,9 @@ a {
 }
 .head-box{
     margin-top: 83px;
-    width: 1150px;
-    height: 300px;
+    width: 1250px;
+    height: 222px;
     background: white;
-    padding: 2%;
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
     border-radius: 6px;
     overflow: hidden;
@@ -452,13 +447,26 @@ a {
     font-family: 微软雅黑;
     font-size: 20px;
 }
+.text-6{
+    color: white;
+    font-style: normal;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 31px;
+    margin-left: 20px;
+}
 .fans-name{
     font-family: 微软雅黑;
 }
 .head-background{
-    background-image: url("//i0.hdslb.com/bfs/space/25cb33f78d5da03ce8a917615b680c4c94dcf52f.jpg");
+    background-image: url("/BOX/Photo/toutu.jpg");
     background-position: 50%;
     background-size: cover;
+    height: 100%;
+    box-shadow: 0px -10px 40px -17px #000 inset;
 }
 .user-auth-subscript.personal-auth.avatar-b, .user-auth-subscript.personal-auth.avatar-m {
     background-position: -38px -53px;
@@ -483,4 +491,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.head-box1{
+    display: flex;
+    position: relative;
+    top: 105px;
+    left: 25px;
 }
