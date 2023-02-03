@@ -287,3 +287,42 @@ a{
     justify-content: center;
     left: 10%;
 }
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: white;
+}
+
+.footer-left {
+    width: 1138px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-link {
+    margin-left: 100px;
+}
+
+.footer-link-content {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;;
+    position: relative;
+    font-family: "Microsoft YaHei", 微软雅黑, 宋体, sans-serif;
+    font-size: 15px;
+    color: #696969;
+}
+
+.rad{
+    border-radius:50%
+}
