@@ -1,14 +1,16 @@
-html,body{
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
-a{
+
+a {
     text-decoration: none;
     color: #000;
 }
-.header{
+
+.header {
     height: 30px;
     width: 100%;
     padding: 15px;
@@ -21,50 +23,58 @@ a{
     top: 0px;
     z-index: 2;
 }
-.header-1{
+
+.header-1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.header-2{
+
+.header-2 {
     display: flex;
     justify-content: space-between;
     position: relative;
     left: 12%;
 }
-.header-2_1{
+
+.header-2_1 {
     position: relative;
     left: 20%;
     display: flex;
     align-items: center;
 }
-.header-2_2{
+
+.header-2_2 {
     position: relative;
     left: 40%;
     display: flex;
     align-items: center;
 }
-.header-2_3{
+
+.header-2_3 {
     position: relative;
     left: 60%;
     display: flex;
     align-items: center;
     color: black;
-    text-decoration : none;
+    text-decoration: none;
 }
-.header-2_4{
+
+.header-2_4 {
     position: relative;
     left: 80%;
     display: flex;
     align-items: center;
 }
-.header-2_5{
+
+.header-2_5 {
     position: relative;
     left: 100%;
     display: flex;
     align-items: center;
 }
-.img-1{
+
+.img-1 {
     position: relative;
     margin: 0 auto;
     display: flex;
@@ -73,17 +83,20 @@ a{
     top: 5%;
 
 }
-.text-1{
+
+.text-1 {
     width: 100px;
     padding: 6px;
 }
-.text-2{
+
+.text-2 {
     color: darkorange;
     font-style: normal;
     font-family: 微软雅黑;
     font-size: 20px;
 }
-.text-3{
+
+.text-3 {
     text-decoration: none;
     font-size: 60px;
     font-family: "仓耳渔阳体 W03";
@@ -92,7 +105,8 @@ a{
     justify-content: center;
     top: 2%;
 }
-.body-1{
+
+.body-1 {
     width: 1200px;
     height: 800px;
     padding: 20px;
@@ -103,12 +117,14 @@ a{
     flex-direction: row;
     justify-content: space-between;
 }
-.body-2{
+
+.body-2 {
     width: 70%;
     position: relative;
     right: 25px;
 }
-.body-2_1{
+
+.body-2_1 {
     background-color: white;
     height: 200px;
     position: relative;
@@ -116,7 +132,8 @@ a{
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
     border-radius: 12px;
 }
-.body-2_2{
+
+.body-2_2 {
     background-color: white;
     width: 100%;
     height: 600px;
@@ -125,7 +142,8 @@ a{
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
     border-radius: 12px;
 }
-.body-2_3{
+
+.body-2_3 {
     background-color: white;
     width: 100%;
     height: 600px;
@@ -134,28 +152,33 @@ a{
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
     border-radius: 12px;
 }
-.body-2_2_1{
+
+.body-2_2_1 {
     display: flex;
     overflow: hidden;
     padding: 3%;
     flex-direction: column;
 }
-.body-3{
+
+.body-3 {
     width: 25%;
     position: relative;
     right: 3%;
 }
-.body-3_1{
+
+.body-3_1 {
     top: 3%;
     border-radius: 12px;
     background-color: white;
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
 }
-.body-3_1_1{
+
+.body-3_1_1 {
     position: relative;
     padding: 10px;
 }
-.body-3_2{
+
+.body-3_2 {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -166,7 +189,8 @@ a{
     font-style: normal;
     color: grey;
 }
-.body-3_3{
+
+.body-3_3 {
     position: relative;
     height: 400px;
     max-height: 30%;
@@ -175,15 +199,18 @@ a{
     border-radius: 12px;
     box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
 }
-.body-3_31{
+
+.body-3_31 {
     padding: 5%;
 }
-.body-3_3_1{
+
+.body-3_3_1 {
     font-family: 微软雅黑;
     font-size: 20px;
     font-style: normal;
 }
-.body-3_4{
+
+.body-3_4 {
     width: 80px;
     height: 80px;
     background-color: white;
@@ -195,7 +222,8 @@ a{
     justify-content: center;
     font-size: 18px;
 }
-.body-3_5{
+
+.body-3_5 {
     width: 80px;
     height: 80px;
     background-color: white;
@@ -208,13 +236,15 @@ a{
     font-size: 18px;
     right: 5%;
 }
+
 .Canvas {
     position: fixed;
     left: -50px;
     bottom: -50px;
     z-index: 9;
 }
-.background{
+
+.background {
     background-image: url("/BOX/Photo/nacho.png");
     background-size: cover;
     width: 100%;
@@ -224,12 +254,17 @@ a{
     top: 0;
     opacity: 40%;
 }
-.body1{
+
+.body1 {
     position: relative;
     width: 100%;
     height: 2000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.box{
+
+.box {
     width: 100%;
     height: 100%;
     display: flex;
@@ -238,7 +273,8 @@ a{
     position: relative;
     top: 50px;
 }
-.box1{
+
+.box1 {
     width: 100%;
     height: 250px;
     background-color: white;
@@ -249,7 +285,8 @@ a{
     align-items: center;
     justify-content: center;
 }
-.box1-1{
+
+.box1-1 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -262,7 +299,8 @@ a{
     font-size: 16px;
     color: #696969;
 }
-.box1-1-1{
+
+.box1-1-1 {
     width: 100px;
     height: 30px;
     display: flex;
@@ -273,20 +311,24 @@ a{
     font-size: 15px;
     color: #696969;
 }
-.rad{
-    border-radius:50%
+
+.rad {
+    border-radius: 50%
 }
-.bilibili{
+
+.bilibili {
     position: relative;
     display: flex;
     justify-content: center;
 }
-.booth{
+
+.booth {
     position: relative;
     display: flex;
     justify-content: center;
     left: 10%;
 }
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -297,6 +339,8 @@ a{
     padding: 20px;
     margin-top: 30px;
     background-color: white;
+    z-index: 1;
+    position: relative;
 }
 
 .footer-left {
@@ -323,6 +367,88 @@ a{
     color: #696969;
 }
 
-.rad{
-    border-radius:50%
+.rad {
+    border-radius: 50%
+}
+
+.main-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main-page-left {
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    border-radius: 6px 0 0 6px;
+    border: 1px #e2e2e2;
+    border-right-style: solid;
+}
+
+.main-page-right {
+    height: 100%;
+    width: 1000px;
+    background-color: white;
+    border-radius: 0 6px 6px 0;
+}
+.head-box{
+    margin-top: 83px;
+    width: 1150px;
+    height: 300px;
+    background: white;
+    padding: 2%;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.list{
+    padding: 0 20px;
+}
+.list1{
+    padding: 0 20px;
+    border: 1px #e2e2e2;
+    border-bottom-style: solid;
+}
+.list-item{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px 0;
+    align-items: center;
+    border: 1px #e2e2e2;
+    border-bottom-style: solid;
+
+}
+.list-left{
+    width: 100%;
+    height: 30px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    width: 100%;
+    align-items: flex-start;
+}
+.text-4{
+    color: #696969;
+    font-style: normal;
+    font-family: 微软雅黑;
+    font-size: 12px;
+}
+.text-5{
+    color: #696969;
+    font-style: normal;
+    font-family: 微软雅黑;
+    font-size: 20px;
 }
