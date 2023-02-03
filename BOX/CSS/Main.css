@@ -258,7 +258,7 @@ a {
 .body1 {
     position: relative;
     width: 100%;
-    height: 2200px;
+    height: 2400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -452,8 +452,35 @@ a {
     font-family: 微软雅黑;
     font-size: 20px;
 }
+.fans-name{
+    font-family: 微软雅黑;
+}
 .head-background{
     background-image: url("https://i0.hdslb.com/bfs/space/25cb33f78d5da03ce8a917615b680c4c94dcf52f.jpg");
     background-position: 50%;
     background-size: cover;
+}
+.user-auth-subscript.personal-auth.avatar-b, .user-auth-subscript.personal-auth.avatar-m {
+    background-position: -38px -53px;
+}
+.user-auth-subscript.avatar-b {
+    right: -50px;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+}
+.user-auth-subscript {
+    position: relative;
+    display: none;
+    z-index: 9;
+    background-image: url(//s1.hdslb.com/bfs/static/jinkela/space/assets/user-auth.png);
+    background-repeat: no-repeat;
+}
+.user-auth-subscript.personal-auth {
+    display: block;
+}
+.bottom-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
