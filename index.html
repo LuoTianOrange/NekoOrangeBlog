@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>橘橘博客</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
     <link rel="stylesheet" href="BOX/CSS/Main1.css">
     <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
     <script src="BOX/JS/live2d_js/polyfill.min.js "></script>
@@ -61,9 +62,9 @@
             <h1>进度</h1>
             <div class="main-page-content">
                 1/23 今天做好了主页<br>
-                2/1  添加了底部链接栏<br>
-                2/2  添加了网易云外链播放器<br>
-                2/3  把网址放到了Cloudflare上
+                2/1 添加了底部链接栏<br>
+                2/2 添加了网易云外链播放器<br>
+                2/3 把网址放到了Cloudflare上,增加了友链
             </div>
         </div>
         <div class="main-page-block">
@@ -97,7 +98,8 @@
             </ol>
         </div>
         <div class="right-info-music">
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=220 src="//music.163.com/outchain/player?type=0&id=8123944496&auto=0&height=430"></iframe>
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=220
+                    src="//music.163.com/outchain/player?type=0&id=8123944496&auto=0&height=430"></iframe>
         </div>
     </div>
 
@@ -111,43 +113,57 @@
         <div class="placeholder">placeholder</div>
         <div class="footer-link">
             <div class="footer-link-title">个人主页</div>
-            <div class="footer-link-content"><a href="https://space.bilibili.com/32256434" class="a1" target="_blank"><img src="BOX/Photo/哔哩哔哩动画1.png" height="20px">&nbsp B站</a> </div>
-            <div class="footer-link-content"><a href="https://raitoorangecat.booth.pm/" class="a1" target="_blank"><img src="BOX/Photo/BOOTH1.png" height="20px" class="rad">&nbsp BOOTH</a></div>
-            <div class="footer-link-content"><a href="https://www.mcbbs.net/?1902195" class="a1" target="_blank"><img src="BOX/Photo/MCBBS.ico" height="20px" class="rad">&nbsp MCBBS</a></div>
-            <div class="footer-link-content"><a href="https://zh.moegirl.org.cn/%E7%81%AF%E7%81%AB%E6%A9%98" class="a1" target="_blank"><img src="BOX/Photo/萌娘百科.ico" height="20px" class="rad">&nbsp 萌娘百科</a></div>
-            <div class="footer-link-content"><a href="https://center.mcmod.cn/33311/" class="a1" target="_blank"><img src="BOX/Photo/MC百科.ico" height="20px" class="rad">&nbsp MC百科</a></div>
+            <div class="footer-link-content"><a href="https://space.bilibili.com/32256434" class="a1"
+                                                target="_blank"><img src="BOX/Photo/哔哩哔哩动画1.png" height="20px">&nbsp
+                B站</a></div>
+            <div class="footer-link-content"><a href="https://raitoorangecat.booth.pm/" class="a1" target="_blank"><img
+                    src="BOX/Photo/BOOTH1.png" height="20px" class="rad">&nbsp BOOTH</a></div>
+            <div class="footer-link-content"><a href="https://www.mcbbs.net/?1902195" class="a1" target="_blank"><img
+                    src="BOX/Photo/MCBBS.ico" height="20px" class="rad">&nbsp MCBBS</a></div>
+            <div class="footer-link-content"><a href="https://zh.moegirl.org.cn/%E7%81%AF%E7%81%AB%E6%A9%98" class="a1"
+                                                target="_blank"><img src="BOX/Photo/萌娘百科.ico" height="20px"
+                                                                     class="rad">&nbsp 萌娘百科</a></div>
+            <div class="footer-link-content"><a href="https://center.mcmod.cn/33311/" class="a1" target="_blank"><img
+                    src="BOX/Photo/MC百科.ico" height="20px" class="rad">&nbsp MC百科</a></div>
         </div>
         <div class="footer-link">
-            <div class="footer-link-content"><a href="https://www.acfun.cn/u/59861334" class="a1" target="_blank"><img src="BOX/Photo/ACFUN.ico" height="20px" class="rad">&nbsp A站</a></div>
-            <div class="footer-link-content"><a href="https://github.com/LuoTianOrange" class="a1" target="_blank"><img src="BOX/Photo/github.png" height="20px" class="rad">&nbsp Github</a></div>
-            <div class="footer-link-content"><a href="https://vrchat.com/home/worlds/wrld_72f18c9e-898a-4618-b069-a992abfd6c26" class="a1" target="_blank"><img src="https://assets.vrchat.com/www/favicons/favicon.ico" height="20px">&nbsp VRChat</a></div>
+            <div class="footer-link-content"><a href="https://www.acfun.cn/u/59861334" class="a1" target="_blank"><img
+                    src="BOX/Photo/ACFUN.ico" height="20px" class="rad">&nbsp A站</a></div>
+            <div class="footer-link-content"><a href="https://github.com/LuoTianOrange" class="a1" target="_blank"><img
+                    src="BOX/Photo/github.png" height="20px" class="rad">&nbsp Github</a></div>
+            <div class="footer-link-content"><a
+                    href="https://vrchat.com/home/worlds/wrld_72f18c9e-898a-4618-b069-a992abfd6c26" class="a1"
+                    target="_blank"><img src="https://assets.vrchat.com/www/favicons/favicon.ico" height="20px">&nbsp
+                VRChat</a></div>
         </div>
     </div>
 </div>
 <div class="background"></div>
 <script>
-    function gotoTop(minHeight){
+    function gotoTop(minHeight) {
 
         // 定义点击返回顶部图标后向上滚动的动画
         $("#gotoTop").click(
-            function(){$('html,body').animate({scrollTop:'0px'},'slow');
+            function () {
+                $('html,body').animate({scrollTop: '0px'}, 'slow');
             })
 
         // 获取页面的最小高度，无传入值则默认为600像素
-        minHeight? minHeight = minHeight:minHeight = 300;
+        minHeight ? minHeight = minHeight : minHeight = 300;
 
         // 为窗口的scroll事件绑定处理函数
-        $(window).scroll(function(){
+        $(window).scroll(function () {
 
             // 获取窗口的滚动条的垂直滚动距离
             var s = $(window).scrollTop();
 
             // 当窗口的滚动条的垂直距离大于页面的最小高度时，让返回顶部图标渐现，否则渐隐
-            if( s > minHeight){
+            if (s > minHeight) {
                 $("#gotoTop").fadeIn(500);
-            }else{
+            } else {
                 $("#gotoTop").fadeOut(500);
-            };
+            }
+            ;
         });
     };
     gotoTop();
