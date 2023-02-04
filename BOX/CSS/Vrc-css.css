@@ -1,0 +1,44 @@
+.vrc-head{
+    position: absolute;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 124px;
+    height: 92px;
+    right: -9px;
+}
+.vrc-box{
+    display: flex;
+    cursor: pointer;
+    width: 128px;
+    height: 74px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    border: 2px solid #67d781;
+    box-sizing: border-box;
+}
+.vrc-name{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+.vrc-text1{
+    color: #0e9bb1;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: "Microsoft YaHei", 微软雅黑, 宋体, sans-serif;
+
+}
+.vrc-1{
+    background-image: url("https://api.vrchat.cloud/api/1/image/file_1c823ae0-a18c-4392-a93d-2be0ebe24588/1/256");
+}
+.vrc-2{
+    background-image: url("https://api.vrchat.cloud/api/1/image/file_fbb47b15-d9d4-4093-ac58-04b98b318f6c/3/256")
+}
+.vrc-3{
+    background-image: url("https://api.vrchat.cloud/api/1/image/file_f1b831e4-452a-4d09-81c0-38e4109ec4ba/2/256");
+}
