@@ -404,8 +404,8 @@ a {
 }
 .list1{
     padding: 0 20px;
-    border: 1px #e2e2e2;
-    border-bottom-style: solid;
+    /*border: 1px #e2e2e2;*/
+    /*border-bottom-style: solid;*/
 }
 .list-item{
     width: 100%;
@@ -427,6 +427,8 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border: 1px #e2e2e2;
+    border-bottom-style: solid;
 }
 .content{
     display: flex;
@@ -460,6 +462,7 @@ a {
 }
 .text-center{
     display: flex;
+    align-items: center;
 
 }
 .fans-name{
