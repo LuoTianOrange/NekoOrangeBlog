@@ -19,6 +19,12 @@
             const elem = document.getElementById(elem_id);  // 获取id元素
             elem.setAttribute('style', 'display: none');
         }
+        // window.onload = function(){
+        //     function show_bili(elem_id){
+        //         const elem = document.getElementById(elem_id);  // 获取id元素
+        //         show_block('bili-list')
+        //     }
+        // }
     </script>
 </head>
 <body>
@@ -72,13 +78,13 @@
                         全部关注
                     </div>
                 </div>
-                <div class="list-left" onclick="show_block('bili-list');hidden_block('vrchat-list')">
+                <div class="list-left" onclick="show_block('bili-list');hidden_block('vrchat-list');hidden_block('vrchat-list2')">
                     <div class="text-5 text-center" id="Bili-link">
                         <img src="BOX/Photo/哔哩哔哩动画1.png" class="rad" width="20">
                         &nbsp;BiliBili
                     </div>
                 </div>  <!--点击切换main-page-right的list-->
-                <div class="list-left" onclick="show_block('vrchat-list');hidden_block('bili-list')">
+                <div class="list-left" onclick="show_block('vrchat-list');hidden_block('bili-list');hidden_block('vrchat-list2')">
                     <div class="text-5 text-center" id="Vrc-link">
                         <img src="https://assets.vrchat.com/www/favicons/favicon.ico" width="20">
                         &nbsp;VRChat
@@ -261,7 +267,7 @@
                     </div>
                 </div>
             </div>
-            <div class="list" id="vrchat-list">
+            <div class="list" id="vrchat-list" style="display: none">
                 <div class="list-item">
                     <div class="vrc-box">
                         <a href="https://vrchat.com/home/user/usr_a6dde1a5-1f9c-4e37-8d0a-84677e9308e3" target="_blank">
@@ -401,6 +407,32 @@
                     </div>
                     <div class="vrc-name">
                         <a class="vrc-text1" href="https://vrchat.com/home/user/usr_231723cf-ddaf-495c-b343-b7ea94038d01" target="_blank">缄默Silver Fox</a>
+                    </div>
+                </div>
+                <div class="list-button button-under" style="display: flex;justify-content: center;align-items: center;">
+                    <div class="vrc-inline">
+                        <button class="vrc-page-down text-center" style="opacity: 0.5"><div class="vrc-text2">上一页</div></button>
+                        <div class="vrc-page1 vrc-margin-left">1</div>
+                        <button class="vrc-page-down text-center vrc-margin-left"><div class="vrc-text2" onclick="hidden_block('vrchat-list');show_block('vrchat-list2')">下一页</div></button>
+                    </div>
+                </div>
+            </div>
+            <div class="list" id="vrchat-list2" style="display: none">
+                <div class="list-item">
+                    <div class="vrc-box">
+                        <a href="https://vrchat.com/home/user/usr_f487cc0e-9d86-410a-9375-3573c5aa6cd7" target="_blank">
+                            <div class="vrc-head vrc-15"></div>
+                        </a>
+                    </div>
+                    <div class="vrc-name">
+                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_f487cc0e-9d86-410a-9375-3573c5aa6cd7" target="_blank">kao_pota</a>
+                    </div>
+                </div>
+                <div class="list-button button-under" style="display: flex;justify-content: center;align-items: center;">
+                    <div class="vrc-inline">
+                        <button class="vrc-page-down text-center"><div class="vrc-text2" onclick="hidden_block('vrchat-list2');show_block('vrchat-list')">上一页</div></button>
+                        <div class="vrc-page1 vrc-margin-left">2</div>
+                        <button class="vrc-page-down text-center vrc-margin-left" style="opacity: 0.5"><div class="vrc-text2">下一页</div></button>
                     </div>
                 </div>
             </div>

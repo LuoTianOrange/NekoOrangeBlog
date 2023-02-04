@@ -401,6 +401,7 @@ a {
 }
 .list{
     padding: 0 20px;
+    height: 100%;
 }
 .list1{
     padding: 0 20px;
@@ -418,6 +419,14 @@ a {
     border: 1px #e2e2e2;
     border-bottom-style: solid;
 
+}
+.list-button{
+    width: 960px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 .list-left{
     width: 100%;

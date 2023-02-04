@@ -31,7 +31,45 @@
     font-weight: bold;
     font-style: normal;
     font-family: "Microsoft YaHei", 微软雅黑, 宋体, sans-serif;
-
+}
+.vrc-text2{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.vrc-page-down{
+    width: 80px;
+    height: 46px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00a1d6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.vrc-page1{
+    width: 46px;
+    height: 46px;
+    border: 1px solid #d6d6d6;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.vrc-inline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vrc-margin-left{
+    margin-left: 20px;
+}
+.button-under{
+    position: absolute;
+    bottom: 15px;
 }
 .vrc-1{
     background-image: url("https://api.vrchat.cloud/api/1/image/file_1c823ae0-a18c-4392-a93d-2be0ebe24588/1/256");
@@ -74,4 +112,7 @@
 }
 .vrc-14{
     background-image: url("https://api.vrchat.cloud/api/1/image/file_afe821a2-c69f-43bb-a871-136b59dc59e9/1/256");
+}
+.vrc-15{
+    background-image: url("https://api.vrchat.cloud/api/1/image/file_9223edc3-d9d0-4a01-8ef6-e4c8d089d1d1/2/256");
 }
