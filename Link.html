@@ -6,6 +6,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
     <link rel="stylesheet" href="BOX/CSS/Main.css">
     <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
+<!--    <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>-->
+    <script>
+        function show_block(elem_id) {
+            const elem = document.getElementById(elem_id);  // 获取id元素
+            elem.setAttribute('style', 'display: block');
+        }
+
+        function hidden_block(elem_id) {
+            const elem = document.getElementById(elem_id);  // 获取id元素
+            elem.setAttribute('style', 'display: none');
+        }
+    </script>
 </head>
 <body>
 <div class="header">
@@ -58,22 +70,22 @@
                         全部关注
                     </div>
                 </div>
-                <div class="list-left">
+                <div class="list-left" onclick="show_block('bili-list');hidden_block('vrchart-list')">
                     <div class="text-5 text-center" id="Bili-link">
                         <img src="BOX/Photo/哔哩哔哩动画1.png" class="rad" width="20">
                         &nbsp;BiliBili
                     </div>
-                </div>
-                <div class="list-left">
+                </div>  <!--点击切换main-page-right的list-->
+                <div class="list-left" onclick="show_block('vrchart-list');hidden_block('bili-list')">
                     <div class="text-5 text-center" id="Vrc-link">
                         <img src="https://assets.vrchat.com/www/favicons/favicon.ico" width="20">
                         &nbsp;VRChat
                     </div>
-                </div>
+                </div>  <!--点击切换main-page-right的list-->
             </div>
         </div>
         <div class="main-page-right">
-            <div class="list">
+            <div class="list" id="bili-list">
                 <div class="list-item">
                     <a href="https://space.bilibili.com/335573347/?spm_id_from=333.999.0.0" target="_blank"><img
                             src="//i1.hdslb.com/bfs/face/1b5f79a740c52c6b96cac42344c50c85c23cd3a5.jpg@96w_96h_1c.webp"
@@ -247,6 +259,9 @@
                     </div>
                 </div>
             </div>
+            <div class="list" id="vrchart-list">
+                place.....
+            </div>
         </div>
     </div>
 </div>
@@ -285,6 +300,5 @@
     </div>
 </div>
 <div class="background"></div>
-
 </body>
 </html>
