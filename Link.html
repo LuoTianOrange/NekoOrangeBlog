@@ -25,6 +25,26 @@
         //         show_block('bili-list')
         //     }
         // }
+        function gotoTop(minHeight) {
+
+            // 定义点击返回顶部图标后向上滚动的动画
+            // $("#gotoTop").click(  // 当id为#gotoTop被点击时触发以下函数
+            //     function () {
+                    $('html,body').animate({scrollTop: '0px'}, 'slow');
+               // })
+
+            // 获取页面的最小高度，无传入值则默认为600像素
+            minHeight ? minHeight = minHeight : minHeight = 300;
+
+            // 为窗口的scroll事件绑定处理函数
+            $(window).scroll(function () {
+
+                // 获取窗口的滚动条的垂直滚动距离
+                var s = $(window).scrollTop();
+
+            });
+        };
+        // gotoTop();
     </script>
 </head>
 <body>
@@ -426,7 +446,7 @@
                     <div class="vrc-inline">
                         <button class="vrc-page-down text-center" style="opacity: 0.5"><div class="vrc-text2">上一页</div></button>
                         <div class="vrc-page1 vrc-margin-left">1</div>
-                        <button class="vrc-page-down text-center vrc-margin-left"><div class="vrc-text2" onclick="hidden_block('vrchat-list');show_block('vrchat-list2')">下一页</div></button>
+                        <button class="vrc-page-down text-center vrc-margin-left"><div class="vrc-text2" onclick="hidden_block('vrchat-list');show_block('vrchat-list2');gotoTop('minHeight')">下一页</div></button>
                     </div>
                 </div>
             </div>
@@ -443,7 +463,7 @@
                 </div>
                 <div class="list-button button-under" style="display: flex;justify-content: center;align-items: center;">
                     <div class="vrc-inline">
-                        <button class="vrc-page-down text-center"><div class="vrc-text2" onclick="hidden_block('vrchat-list2');show_block('vrchat-list')">上一页</div></button>
+                        <button class="vrc-page-down text-center"><div class="vrc-text2" onclick="hidden_block('vrchat-list2');show_block('vrchat-list');gotoTop('minHeight')">上一页</div></button>
                         <div class="vrc-page1 vrc-margin-left">2</div>
                         <button class="vrc-page-down text-center vrc-margin-left" style="opacity: 0.5"><div class="vrc-text2">下一页</div></button>
                     </div>
