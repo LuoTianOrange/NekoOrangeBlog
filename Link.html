@@ -10,28 +10,23 @@
     <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
     <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
     <script>
-        function show_block(elem_id) {
+        function show_block(elem_id) {//显示元素
             const elem = document.getElementById(elem_id);  // 获取id元素
             elem.setAttribute('style', 'display: block');
         }
 
-        function hidden_block(elem_id) {
+        function hidden_block(elem_id) {//隐藏元素
             const elem = document.getElementById(elem_id);  // 获取id元素
             elem.setAttribute('style', 'display: none');
         }
-        // window.onload = function(){
-        //     function show_bili(elem_id){
-        //         const elem = document.getElementById(elem_id);  // 获取id元素
-        //         show_block('bili-list')
-        //     }
-        // }
-        function gotoTop(minHeight) {
+
+        function gotoTop(minHeight) {//向上滚动
 
             // 定义点击返回顶部图标后向上滚动的动画
             // $("#gotoTop").click(  // 当id为#gotoTop被点击时触发以下函数
             //     function () {
-                    $('html,body').animate({scrollTop: '0px'}, 'slow');
-               // })
+            $('html,body').animate({scrollTop: '0px'}, 'slow');
+            // })
 
             // 获取页面的最小高度，无传入值则默认为600像素
             minHeight ? minHeight = minHeight : minHeight = 300;
@@ -98,13 +93,15 @@
                         全部关注
                     </div>
                 </div>
-                <div class="list-left" onclick="show_block('bili-list');hidden_block('vrchat-list');hidden_block('vrchat-list2')">
+                <div class="list-left"
+                     onclick="show_block('bili-list');hidden_block('vrchat-list');hidden_block('vrchat-list2')">
                     <div class="text-5 text-center" id="Bili-link">
                         <img src="BOX/Photo/哔哩哔哩动画1.png" class="rad" width="20">
                         &nbsp;BiliBili
                     </div>
                 </div>  <!--点击切换main-page-right的list-->
-                <div class="list-left" onclick="show_block('vrchat-list');hidden_block('bili-list');hidden_block('vrchat-list2')">
+                <div class="list-left"
+                     onclick="show_block('vrchat-list');hidden_block('bili-list');hidden_block('vrchat-list2')">
                     <div class="text-5 text-center" id="Vrc-link">
                         <img src="https://assets.vrchat.com/www/favicons/favicon.ico" width="20">
                         &nbsp;VRChat
@@ -299,6 +296,62 @@
                         </p>
                     </div>
                 </div>
+                <div class="list-button button-under"
+                     style="display: flex;justify-content: center;align-items: center;">
+                    <div class="vrc-inline">
+                        <button class="vrc-page-down text-center" style="opacity: 0.5">
+                            <div class="vrc-text2">上一页</div>
+                        </button>
+                        <div class="vrc-page1 vrc-margin-left">1</div>
+                        <button class="vrc-page-down text-center vrc-margin-left">
+                            <div class="vrc-text2"
+                                 onclick="hidden_block('bili-list');show_block('bili-list2');gotoTop('minHeight')">下一页
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="list" id="bili-list2" style="display: none">
+                <div class="list-item">
+                    <a href="//space.bilibili.com/82717585/" target="_blank" class="cover"><img
+                            src="//i1.hdslb.com/bfs/face/5d41583527fcaf9a1993f998c600a44e4420bb11.jpg@96w_96h_1c.webp"
+                            alt="星奈奈奈Sena-nana" class="rad" width="70"><!----><!----></a>
+                    <div class="content">
+                        <span class="fans-name" style="color: rgb(251, 114, 153);"><a
+                                href="//space.bilibili.com/82717585/" target="_blank"
+                                class="cover">星奈奈奈Sena-nana</a></span>
+                        <p title="github势V 休息中（正在搓游戏和一些小工具） github:sena-nana" class="text-4">
+                            github势V 休息中（正在搓游戏和一些小工具） github:sena-nana
+                        </p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <a href="//space.bilibili.com/375291423/" target="_blank" class="cover"><img
+                            src="//i0.hdslb.com/bfs/face/f767ca46cc7965357ce9bdc2d19ac4bc01938f49.jpg@96w_96h_1c.webp"
+                            alt="猫嫣千夕Channel" class="rad" width="70"><!----><!----></a>
+                    <div class="content">
+                        <span class="fans-name" style="color: rgb(251, 114, 153);"><a
+                                href="//space.bilibili.com/375291423/" target="_blank"
+                                class="cover">猫嫣千夕Channel</a></span>
+                        <p title="直到它四周的风也成了乐音，就像阴暗、空虚的一切，沐着美好明丽事物的光辉，充满了光明和爱" class="text-4">
+                            直到它四周的风也成了乐音，就像阴暗、空虚的一切，沐着美好明丽事物的光辉，充满了光明和爱
+                        </p>
+                    </div>
+                </div>
+                <div class="list-button button-under"
+                     style="display: flex;justify-content: center;align-items: center;">
+                    <div class="vrc-inline">
+                        <button class="vrc-page-down text-center">
+                            <div class="vrc-text2"
+                                 onclick="hidden_block('bili-list2');show_block('bili-list');gotoTop('minHeight')">上一页
+                            </div>
+                        </button>
+                        <div class="vrc-page1 vrc-margin-left">2</div>
+                        <button class="vrc-page-down text-center vrc-margin-left" style="opacity: 0.5">
+                            <div class="vrc-text2">下一页</div>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="list" id="vrchat-list" style="display: none">
                 <div class="list-item">
@@ -319,7 +372,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_d5e93399-45d1-43bd-a1b6-cbf102534eed" target="_blank">天月のダンス</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_d5e93399-45d1-43bd-a1b6-cbf102534eed" target="_blank">天月のダンス</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -329,7 +383,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_80ddd516-e3fd-4973-b449-e19bdd4abb0a" target="_blank">Sonic853</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_80ddd516-e3fd-4973-b449-e19bdd4abb0a" target="_blank">Sonic853</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -339,7 +394,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_1e2fe18d-dd82-4d9b-bb42-594185e758d3" target="_blank">SuMMeRMyLoVe</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_1e2fe18d-dd82-4d9b-bb42-594185e758d3" target="_blank">SuMMeRMyLoVe</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -349,7 +405,9 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_fa52805d-abf1-4e5f-be35-1c2ce81c93f2" target="_blank">ハ · 七</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_fa52805d-abf1-4e5f-be35-1c2ce81c93f2" target="_blank">ハ
+                            · 七</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -359,7 +417,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_e7cec8a8-2b16-44ab-a38d-585b35f094f2" target="_blank">yaohu</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_e7cec8a8-2b16-44ab-a38d-585b35f094f2" target="_blank">yaohu</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -369,7 +428,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_90ed9ead-d3f7-4e92-89e5-90920366ecde" target="_blank">胡豆桑desu</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_90ed9ead-d3f7-4e92-89e5-90920366ecde" target="_blank">胡豆桑desu</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -379,7 +439,9 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_7cabc02e-aa42-4d2c-8ad1-54cb4e7edc92" target="_blank">『伊魯』_ I L L U</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_7cabc02e-aa42-4d2c-8ad1-54cb4e7edc92" target="_blank">『伊魯』_
+                            I L L U</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -389,7 +451,9 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_d62a50b8-62f4-44b0-96c7-c24ba6630169" target="_blank">电羽9 cyfuther</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_d62a50b8-62f4-44b0-96c7-c24ba6630169" target="_blank">电羽9
+                            cyfuther</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -399,7 +463,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_344a510e-723e-4da7-bf23-fab7081a9812" target="_blank">白星そら</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_344a510e-723e-4da7-bf23-fab7081a9812" target="_blank">白星そら</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -409,7 +474,9 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_d74e2a54-29ee-481b-91a7-14018da77103" target="_blank">- Npa -</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_d74e2a54-29ee-481b-91a7-14018da77103" target="_blank">-
+                            Npa -</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -419,7 +486,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_15c8ce5d-320a-42a1-8142-4b365c77c862" target="_blank">東風谷蒙牛</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_15c8ce5d-320a-42a1-8142-4b365c77c862" target="_blank">東風谷蒙牛</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -429,7 +497,8 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_e248cdd8-4d4b-40a2-b65b-f759a2183229" target="_blank">miao_</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_e248cdd8-4d4b-40a2-b65b-f759a2183229" target="_blank">miao_</a>
                     </div>
                 </div>
                 <div class="list-item">
@@ -439,14 +508,24 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_231723cf-ddaf-495c-b343-b7ea94038d01" target="_blank">缄默Silver Fox</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_231723cf-ddaf-495c-b343-b7ea94038d01" target="_blank">缄默Silver
+                            Fox</a>
                     </div>
                 </div>
-                <div class="list-button button-under" style="display: flex;justify-content: center;align-items: center;">
+                <div class="list-button button-under"
+                     style="display: flex;justify-content: center;align-items: center;">
                     <div class="vrc-inline">
-                        <button class="vrc-page-down text-center" style="opacity: 0.5"><div class="vrc-text2">上一页</div></button>
+                        <button class="vrc-page-down text-center" style="opacity: 0.5">
+                            <div class="vrc-text2">上一页</div>
+                        </button>
                         <div class="vrc-page1 vrc-margin-left">1</div>
-                        <button class="vrc-page-down text-center vrc-margin-left"><div class="vrc-text2" onclick="hidden_block('vrchat-list');show_block('vrchat-list2');gotoTop('minHeight')">下一页</div></button>
+                        <button class="vrc-page-down text-center vrc-margin-left">
+                            <div class="vrc-text2"
+                                 onclick="hidden_block('vrchat-list');show_block('vrchat-list2');gotoTop('minHeight')">
+                                下一页
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -458,14 +537,23 @@
                         </a>
                     </div>
                     <div class="vrc-name">
-                        <a class="vrc-text1" href="https://vrchat.com/home/user/usr_f487cc0e-9d86-410a-9375-3573c5aa6cd7" target="_blank">kao_pota</a>
+                        <a class="vrc-text1"
+                           href="https://vrchat.com/home/user/usr_f487cc0e-9d86-410a-9375-3573c5aa6cd7" target="_blank">kao_pota</a>
                     </div>
                 </div>
-                <div class="list-button button-under" style="display: flex;justify-content: center;align-items: center;">
+                <div class="list-button button-under"
+                     style="display: flex;justify-content: center;align-items: center;">
                     <div class="vrc-inline">
-                        <button class="vrc-page-down text-center"><div class="vrc-text2" onclick="hidden_block('vrchat-list2');show_block('vrchat-list');gotoTop('minHeight')">上一页</div></button>
+                        <button class="vrc-page-down text-center">
+                            <div class="vrc-text2"
+                                 onclick="hidden_block('vrchat-list2');show_block('vrchat-list');gotoTop('minHeight')">
+                                上一页
+                            </div>
+                        </button>
                         <div class="vrc-page1 vrc-margin-left">2</div>
-                        <button class="vrc-page-down text-center vrc-margin-left" style="opacity: 0.5"><div class="vrc-text2">下一页</div></button>
+                        <button class="vrc-page-down text-center vrc-margin-left" style="opacity: 0.5">
+                            <div class="vrc-text2">下一页</div>
+                        </button>
                     </div>
                 </div>
             </div>
