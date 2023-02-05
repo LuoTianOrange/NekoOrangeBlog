@@ -1,0 +1,41 @@
+.de-body{
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+
+}
+.de-body-block{
+    margin-top: 40px;
+    background-color: white;
+    min-height: 600px;
+    padding: 3%;
+    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+    overflow:hidden
+}
+textarea {
+    width: 200px;
+    height: 100px;
+    border: 1px pink solid;
+    /* 不设置轮廓 */
+    outline: none;
+    /* 设置其不能改变长宽 */
+    resize: none;
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li {
+    width: 300px;
+    padding: 5px;
+    background-color: #eee;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+li a {
+    float: right;
+}
