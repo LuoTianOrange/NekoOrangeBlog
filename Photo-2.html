@@ -10,50 +10,9 @@
   <link rel="stylesheet" href="BOX/CSS/Gallery-css.css">
   <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
   <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
-  <script>
-    function show_block(elem_id) {//显示元素
-      const elem = document.getElementById(elem_id);  // 获取id元素
-      elem.setAttribute('style', 'display: block');
-    }
-
-    function hidden_block(elem_id) {//隐藏元素
-      const elem = document.getElementById(elem_id);  // 获取id元素
-      elem.setAttribute('style', 'display: none');
-    }
-
-    function gotoTop(minHeight) {//向上滚动
-
-      // 定义点击返回顶部图标后向上滚动的动画
-      // $("#gotoTop").click(  // 当id为#gotoTop被点击时触发以下函数
-      //     function () {
-      $('html,body').animate({scrollTop: '0px'}, 'slow');
-      // })
-
-      // 获取页面的最小高度，无传入值则默认为600像素
-      minHeight ? minHeight = minHeight : minHeight = 300;
-
-      // 为窗口的scroll事件绑定处理函数
-      $(window).scroll(function () {
-
-        // 获取窗口的滚动条的垂直滚动距离
-        var s = $(window).scrollTop();
-
-      });
-    };
-    // gotoTop();
-  </script>
   <style>
-    .ph1-body{
-      position: relative;
-      width: 100%;
-      height: 2400px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
     .ph-bg-1{
-      background-image: url("https://s1.ax1x.com/2023/02/06/pSc2dAI.png");
+      background-image: url("BOX/Photo/VRChat/和Npa,kava的新年合照.jpg");
       background-size: cover;
       width: 100%;
       height: 100%;
@@ -69,6 +28,15 @@
       width: 1000px;
       background-color: white;
       border-radius: 6px;
+    }
+    .ph2-body{
+      position: relative;
+      width: 100%;
+      height: 3400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
   </style>
 </head>
@@ -106,7 +74,7 @@
     </a>
   </div>
 </div>
-<div class="ph1-body">
+<div class="ph2-body">
   <div class="gy-main-page">
     <a href="Gallery.html">
       <div class="gy-button-top">
@@ -120,16 +88,24 @@
     <div class="ph-main-page">
       <div style="margin: 0 3%">
         <div class="gy-photo-box">
-          <img src="https://s1.ax1x.com/2023/02/06/pSc2UHA.png" class="gy-photo-max">
-          <div class="all-text-1 gy-text-description">墙上的是联动群大合照，还有一些朋友画的画，一些以前拍的照片</div>
+          <img src="BOX/Photo/VRChat/和Npa,kava的新年合照.jpg" class="gy-photo-max">
+          <div class="all-text-1 gy-text-description">拍摄于2023年跨年,和Npa,kava的合照</div>
         </div>
         <div class="gy-photo-box">
-          <img src="https://s1.ax1x.com/2023/02/06/pSc2dAI.png" class="gy-photo-max">
-          <div class="all-text-1 gy-text-description">电脑是当初做这个地图时候的场景</div>
+          <img src="BOX/Photo/VRChat/2022-05-08.png" class="gy-photo-max">
+          <div class="all-text-1 gy-text-description">在星梦岛的自拍，拍摄于2022=05-08</div>
         </div>
         <div class="gy-photo-box">
-          <img src="https://s1.ax1x.com/2023/02/06/pSc2NBd.png" class="gy-photo-max">
-          <div class="all-text-1 gy-text-description">房子全貌</div>
+          <img src="BOX/Photo/VRChat/2022-05-07_21-05-11.549.png" class="gy-photo-max">
+          <div class="all-text-1 gy-text-description">和妖狐，小圆在pypydance</div>
+        </div>
+        <div class="gy-photo-box">
+          <img src="BOX/Photo/VRChat/2022-05-04_23-42-00.515.png" class="gy-photo-max">
+          <div class="all-text-1 gy-text-description">和妖狐的合照</div>
+        </div>
+        <div class="gy-photo-box">
+          <img src="BOX/Photo/VRChat/VRChat_1920x1080_2022-05-05_00-30-34.413.png" class="gy-photo-max">
+          <div class="all-text-1 gy-text-description">也是合照</div>
         </div>
       </div>
     </div>
