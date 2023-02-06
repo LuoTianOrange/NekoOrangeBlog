@@ -2,23 +2,23 @@ html,body{
     margin: 0;
     padding: 0;
 }
-a{
+a {
+    color: #696969;
     text-decoration: none;
-    color: #000;
 }
-.header{
-    height: 30px;
-    width: 100%;
-    padding: 15px;
-    background-color: white;
-    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-}
+/*.header{*/
+/*    height: 30px;*/
+/*    width: 100%;*/
+/*    padding: 15px;*/
+/*    background-color: white;*/
+/*    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    flex-direction: row;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    z-index: 2;*/
+/*}*/
 .header-1{
     display: flex;
     flex-direction: row;
@@ -137,4 +137,44 @@ a{
 .btn1{
     width: 100px;
     height: 40px;
+}
+.header {
+    height: 30px;
+
+    /*固定头部导航*/
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+}
+
+.header-bar {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-text-group {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: gray;
+}
+
+.header-bar-right {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    align-items: center;
 }

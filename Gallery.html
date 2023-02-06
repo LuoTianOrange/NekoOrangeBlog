@@ -2,44 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>捐助</title>
+    <title>图库</title>
     <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
-    <link rel="stylesheet" href="BOX/CSS/Main1.css">
-    <link rel="stylesheet" href="BOX/CSS/Donate-css.css">
+    <link rel="stylesheet" href="BOX/CSS/Main.css">
+    <link rel="stylesheet" href="BOX/CSS/Vrc-css.css">
+    <link rel="stylesheet" href="BOX/CSS/text-style.css">
     <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
+    <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
     <script>
-        //留言板
-        //1、获取元素
-        window.onload = () =>{
-            var txt = document.getElementById('text-area');
-            var btn = document.getElementById('submit-button');
-            var ul = document.getElementById('sub-list');
-            //2、给button绑定点击事件
-            btn.onclick = function () {
-                if (txt.value == "") {//当文本框中没有文字时，提示
-                    alert("您没有输入内容")
-                } else {
-                    //创建元素li作为留言区
-                    var li = document.createElement("li");
-                    //将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
-                    li.innerHTML = txt.value + "<a href='javascript:;'>删除</a>"
-                    txt.value = "";//添加之后文本框的内容清空
-                    //将留言添加到ul中，而且在最上方
-                    ul.insertBefore(li, ul.children[0]);
-                    //当点击删除时删除ul中的li
-                    var as = document.querySelectorAll("a");
-                    //循环给每个删除绑定事件
-                    for (var i = 0; i < as.length; i++) {
-                        as[i].onclick = function () {
-                            //删除当前a标签所在位置的父节点li
-                            ul.removeChild(this.parentNode);
-                        }
-                    }
-                }
-            }
-            //blog.csdn.net/m0_46612221/article/details/121455005
+        function show_block(elem_id) {//显示元素
+            const elem = document.getElementById(elem_id);  // 获取id元素
+            elem.setAttribute('style', 'display: block');
         }
 
+        function hidden_block(elem_id) {//隐藏元素
+            const elem = document.getElementById(elem_id);  // 获取id元素
+            elem.setAttribute('style', 'display: none');
+        }
+
+        function gotoTop(minHeight) {//向上滚动
+
+            // 定义点击返回顶部图标后向上滚动的动画
+            // $("#gotoTop").click(  // 当id为#gotoTop被点击时触发以下函数
+            //     function () {
+            $('html,body').animate({scrollTop: '0px'}, 'slow');
+            // })
+
+            // 获取页面的最小高度，无传入值则默认为600像素
+            minHeight ? minHeight = minHeight : minHeight = 300;
+
+            // 为窗口的scroll事件绑定处理函数
+            $(window).scroll(function () {
+
+                // 获取窗口的滚动条的垂直滚动距离
+                var s = $(window).scrollTop();
+
+            });
+        };
+        // gotoTop();
     </script>
 </head>
 <body>
@@ -76,16 +76,38 @@
         </a>
     </div>
 </div>
-<div class="content">
-    <div class="de-body">
-        <div class="de-body-block">
-            <div class="text-box">
-                <h2>留言板</h2>
-                <h4>非永久，暂未实现</h4>
-                <textarea id="text-area"></textarea>
-                <button id="submit-button">发布</button>
-                <ul id="sub-list"></ul>
+<div class="body1">
+    <div class="head-box">
+        <div class="head-background">
+            <div class="head-box1">
+                <a href="https://space.bilibili.com/32256434/" style="display: flex" target="_blank">
+                    <img src="BOX/Photo/1213.png" width="70" class="rad">
+                    <div class="text-6">灯火橘Channel</div>
+                </a>
             </div>
+            <div class="head-box2"><!-- 签名栏 -->
+                <div class="text-7">希望不会忘记我的朋友们</div>
+            </div>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="main-page-left">
+            <div class="list1">
+                <div class="list-left">
+                    <div class="text-5">
+                        图库
+                    </div>
+                </div>
+                <div class="list-left">
+                    <div class="text-5 text-center" id="Vrc-photo">
+                        <img src="https://assets.vrchat.com/www/favicons/favicon.ico" width="20">
+                        &nbsp;VRChat
+                    </div>
+                </div>  <!--点击切换main-page-right的list-->
+            </div>
+        </div>
+        <div class="main-page-right">
+
         </div>
     </div>
 </div>
