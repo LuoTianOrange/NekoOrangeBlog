@@ -6,9 +6,58 @@
     <title>仓库</title>
     <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
     <link rel="stylesheet" href="BOX/CSS/Main.css">
+    <link rel="stylesheet" href="BOX/CSS/Store-css.css">
+    <link rel="stylesheet" href="BOX/CSS/text-style.css">
     <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
     <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
     <meta name="description" content="灯火橘的博客,记录学习与生活">
+    <script>
+        function show_block(elem_id) {//显示元素
+            const elem = document.getElementById(elem_id);  // 获取id元素
+            elem.setAttribute('style', 'display: block');
+        }
+
+        function hidden_block(elem_id) {//隐藏元素
+            const elem = document.getElementById(elem_id);  // 获取id元素
+            elem.setAttribute('style', 'display: none');
+        }
+
+        function gotoTop(minHeight) {//向上滚动
+
+            // 定义点击返回顶部图标后向上滚动的动画
+            // $("#gotoTop").click(  // 当id为#gotoTop被点击时触发以下函数
+            //     function () {
+            $('html,body').animate({scrollTop: '0px'}, 'slow');
+            // })
+
+            // 获取页面的最小高度，无传入值则默认为600像素
+            minHeight ? minHeight = minHeight : minHeight = 300;
+
+            // 为窗口的scroll事件绑定处理函数
+            $(window).scroll(function () {
+
+                // 获取窗口的滚动条的垂直滚动距离
+                var s = $(window).scrollTop();
+
+            });
+        };
+        // gotoTop();
+    </script>
+    <style>
+        .footer1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            /*width: 100%;*/
+            padding: 20px;
+            /*margin-top: 30px;*/
+            background-color: white;
+            z-index: 1;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 <div class="header">
@@ -44,42 +93,123 @@
         </a>
     </div>
 </div>
-<div class="body1">
-    <h1 class="text-3">标题</h1>
+<div class="sto-main">
+    <div class="sto-main-left">
+        <div class="left-top"></div>
+        <div class="sto-list-item" id="目录1">
+            <div class="sto-list" id="sto-目录">
+                <div class="all-text-2">目录</div>
+            </div>
+            <div class="sto-list" id="sto-前端开发" onclick="show_block('目录-前端开发');hidden_block('目录-后端开发');hidden_block('目录-3D建模');hidden_block('目录-平面建模');hidden_block('目录1')">
+                <div class="all-text-3">前端开发</div>
+            </div>
+            <div class="sto-list" id="sto-后端开发" onclick="show_block('目录-后端开发');hidden_block('目录-前端开发');hidden_block('目录-3D建模');hidden_block('目录-平面建模');hidden_block('目录1')">
+                <div class="all-text-3">后端开发</div>
+            </div>
+            <div class="sto-list" id="sto-3D建模" onclick="show_block('目录-3D建模');hidden_block('目录-后端开发');hidden_block('目录-前端开发');hidden_block('目录-平面建模');hidden_block('目录1')">
+                <div class="all-text-3">3D建模</div>
+            </div>
+            <div class="sto-list" id="sto-平面建模" onclick="show_block('目录-平面建模');hidden_block('目录-后端开发');hidden_block('目录-3D建模');hidden_block('目录-前端开发');hidden_block('目录1')">
+                <div class="all-text-3">平面建模</div>
+            </div>
+        </div>
+        <div class="sto-list-item" id="目录-前端开发" style="display: none" >
+            <div class="sto-list" id="sto-目录-前端开发">
+                <div class="all-text-2">目录</div>
+            </div>
+            <div class="sto-list" id="sto-HTML,CSS">
+                <div class="all-text-3">HTML,CSS</div>
+            </div>
+            <div class="sto-list" id="sto-JS,Vue">
+                <div class="all-text-3">JS,Vue</div>
+            </div>
+        </div>
+        <div class="sto-list-item" id="目录-后端开发" style="display: none">
+            <div class="sto-list" id="sto-目录-后端开发">
+                <div class="all-text-2">目录</div>
+            </div>
+            <div class="sto-list" id="sto-Python">
+                <div class="all-text-3">Python</div>
+            </div>
+            <div class="sto-list" id="sto-Java">
+                <div class="all-text-3">Java</div>
+            </div>
+            <div class="sto-list" id="sto-C++">
+                <div class="all-text-3">C++</div>
+            </div>
+        </div>
+        <div class="sto-list-item" id="目录-3D建模" style="display: none">
+            <div class="sto-list" id="sto-目录-3D建模">
+                <div class="all-text-2">目录</div>
+            </div>
+            <div class="sto-list" id="sto-Unity">
+                <div class="all-text-3">Unity</div>
+            </div>
+            <div class="sto-list" id="sto-Blender">
+                <div class="all-text-3">Blender</div>
+            </div>
+        </div>
+        <div class="sto-list-item" id="目录-平面建模" style="display: none">
+            <div class="sto-list" id="sto-目录-平面建模">
+                <div class="all-text-2">目录</div>
+            </div>
+            <div class="sto-list" id="sto-Live2D">
+                <div class="all-text-3">Live2D</div>
+            </div>
+        </div>
+    </div>
+    <div class="sto-main-right">
+        <div class="right-top"></div>
+        <div class="sto-main-headbox">
+            <h1>目录</h1>
+            <div class="sto-main-textbox all-main-text1">
+                这里是目录的首页
+            </div>
+        </div>
+    </div>
 </div>
 <div class="body-3_5" id="gotoTop">
     <a>返回<br>顶部</a>
 </div>
-<div class="footer">
+<div class="footer1">
     <div class="footer-left">
         <div class="bottom-logo">
             <img src="BOX/Photo/灯火橘logo.png" width="80%">
         </div>
         <div class="footer-link">
-            <div class="footer-link-title">个人主页</div><br>
+            <div class="footer-link-title">个人主页</div>
+            <br>
             <div class="footer-link-content"><a href="https://space.bilibili.com/32256434" class="a1 text-center"
                                                 target="_blank"><img src="BOX/Photo/哔哩哔哩动画1.png" height="20px">&nbsp
                 B站</a></div>
-            <div class="footer-link-content"><a href="https://raitoorangecat.booth.pm/" class="a1 text-center" target="_blank"><img
+            <div class="footer-link-content"><a href="https://raitoorangecat.booth.pm/" class="a1 text-center"
+                                                target="_blank"><img
                     src="BOX/Photo/BOOTH1.png" height="20px" class="rad">&nbsp BOOTH</a></div>
-            <div class="footer-link-content"><a href="https://www.mcbbs.net/?1902195" class="a1 text-center" target="_blank"><img
+            <div class="footer-link-content"><a href="https://www.mcbbs.net/?1902195" class="a1 text-center"
+                                                target="_blank"><img
                     src="BOX/Photo/MCBBS.ico" height="20px" class="rad">&nbsp MCBBS</a></div>
-            <div class="footer-link-content"><a href="https://zh.moegirl.org.cn/%E7%81%AF%E7%81%AB%E6%A9%98" class="a1 text-center"
+            <div class="footer-link-content"><a href="https://zh.moegirl.org.cn/%E7%81%AF%E7%81%AB%E6%A9%98"
+                                                class="a1 text-center"
                                                 target="_blank"><img src="BOX/Photo/萌娘百科.ico" height="20px"
                                                                      class="rad">&nbsp 萌娘百科</a></div>
-            <div class="footer-link-content"><a href="https://center.mcmod.cn/33311/" class="a1 text-center" target="_blank"><img
+            <div class="footer-link-content"><a href="https://center.mcmod.cn/33311/" class="a1 text-center"
+                                                target="_blank"><img
                     src="BOX/Photo/MC百科.ico" height="20px" class="rad">&nbsp MC百科</a></div>
         </div>
         <div class="footer-link"><br>
-            <div class="footer-link-content"><a href="https://www.acfun.cn/u/59861334" class="a1 text-center" target="_blank"><img
+            <div class="footer-link-content"><a href="https://www.acfun.cn/u/59861334" class="a1 text-center"
+                                                target="_blank"><img
                     src="BOX/Photo/ACFUN.ico" height="20px" class="rad">&nbsp A站</a></div>
-            <div class="footer-link-content"><a href="https://github.com/LuoTianOrange" class="a1 text-center" target="_blank"><img
+            <div class="footer-link-content"><a href="https://github.com/LuoTianOrange" class="a1 text-center"
+                                                target="_blank"><img
                     src="BOX/Photo/github.png" height="20px" class="rad">&nbsp Github</a></div>
             <div class="footer-link-content"><a
-                    href="https://vrchat.com/home/worlds/wrld_72f18c9e-898a-4618-b069-a992abfd6c26" class="a1 text-center"
+                    href="https://vrchat.com/home/worlds/wrld_72f18c9e-898a-4618-b069-a992abfd6c26"
+                    class="a1 text-center"
                     target="_blank"><img src="https://assets.vrchat.com/www/favicons/favicon.ico" height="20px">&nbsp
                 VRChat</a></div>
-            <div class="footer-link-content"><a href="https://www.youtube.com/@raitoorangech5505/" class="a1 text-center" target="_blank"><img
+            <div class="footer-link-content"><a href="https://www.youtube.com/@raitoorangech5505/"
+                                                class="a1 text-center" target="_blank"><img
                     src="BOX/Photo/Youtube.ico" height="20px" class="rad">&nbsp Youtube</a></div>
         </div>
     </div>

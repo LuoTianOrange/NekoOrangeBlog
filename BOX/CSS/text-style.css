@@ -7,5 +7,26 @@
     color: #999;
     font-size: 13px;
     font-style: normal;
-    font-family: 微软雅黑;
+    font-family: 微软雅黑,sans-serif;
+}
+/*灰色中等，标题*/
+.all-text-2{
+    color: #696969;
+    font-style: normal;
+    font-family: 微软雅黑,sans-serif;
+    font-size: 20px;
+}
+/*灰色列表中等*/
+.all-text-3{
+    color: #696969;
+    font-style: normal;
+    font-family: 微软雅黑,sans-serif;
+    font-size: 16px;
+}
+/*黑色正文*/
+.all-main-text1{
+    color: black;
+    font-style: normal;
+    font-family: 微软雅黑, sans-serif;
+    font-size: 20px;
 }

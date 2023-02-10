@@ -1,0 +1,78 @@
+.sto-main{
+    width: 100%;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 1px #e2e2e2;
+    border-bottom-style: solid;
+    /*box-shadow: 0 0 40px -18px #000;*/
+    z-index: 2;
+}
+.sto-main-left{
+    height: 100%;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: white;
+    position: relative;
+    border: 1px #e2e2e2;
+    border-right-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sto-main-right{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left-top{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+.right-top{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+.sto-list-item{
+    height: 60px;
+    background-color: white;
+    padding: 0 6%;
+}
+.sto-list{
+    height: 100%;
+    padding: 3% 0;
+    border: 1px #e2e2e2;
+    border-bottom-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.sto-main-headbox{
+    height: 100%;
+    width: 90%;
+    padding: 0 3%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sto-main-textbox{
+    width: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
