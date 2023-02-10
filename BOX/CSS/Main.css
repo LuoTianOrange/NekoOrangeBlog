@@ -563,4 +563,7 @@ a {
     display: flex;
     align-items: center;
 }
-
+/*文字上下间隔*/
+.text-upon{
+    padding: 10px 0;
+}

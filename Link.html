@@ -101,17 +101,24 @@
                     </div>
                 </div>
                 <div class="list-left"
-                     onclick="show_block('bili-list');hidden_block('vrchat-list');hidden_block('vrchat-list2');hidden_block('bili-list2')">
+                     onclick="show_block('bili-list');hidden_block('vrchat-list');hidden_block('vrchat-list2');hidden_block('bili-list2');hidden_block('web-list');">
                     <div class="text-5 text-center" id="Bili-link">
                         <img src="BOX/Photo/哔哩哔哩动画1.png" class="rad" width="20">
                         &nbsp;BiliBili
                     </div>
                 </div>  <!--点击切换main-page-right的list-->
                 <div class="list-left"
-                     onclick="show_block('vrchat-list');hidden_block('bili-list');hidden_block('vrchat-list2');hidden_block('bili-list2')">
+                     onclick="show_block('vrchat-list');hidden_block('bili-list');hidden_block('vrchat-list2');hidden_block('bili-list2');hidden_block('web-list')">
                     <div class="text-5 text-center" id="Vrc-link">
                         <img src="https://assets.vrchat.com/www/favicons/favicon.ico" width="20">
                         &nbsp;VRChat
+                    </div>
+                </div>  <!--点击切换main-page-right的list-->
+                <div class="list-left"
+                     onclick="show_block('web-list');hidden_block('vrchat-list');hidden_block('bili-list');hidden_block('vrchat-list2');hidden_block('bili-list2')">
+                    <div class="text-5 text-center" id="web-link">
+                        <img src="BOX/Photo/友链.webp" width="20">
+                        &nbsp;友链
                     </div>
                 </div>  <!--点击切换main-page-right的list-->
             </div>
@@ -603,6 +610,18 @@
                         <button class="vrc-page-down text-center vrc-margin-left" style="opacity: 0.5">
                             <div class="vrc-text2">下一页</div>
                         </button>
+                    </div>
+                </div>
+            </div>
+            <div class="list" id="web-list" style="display: none">
+                <div class="list-item">
+                    <a href="https://blog.shiinafan.top/" target="_blank">
+                        <img src="https://blog.shiinafan.top/avatar/avatar2.jpg" width="70" class="rad"></a>
+                    <div class="content">
+                        <a href="https://blog.shiinafan.top/" target="_blank">
+                            <div class="all-pink-name">Shiina的博客</div>
+                            <div class="all-text-1 text-upon">https://blog.shiinafan.top/</div>
+                        </a>
                     </div>
                 </div>
             </div>
