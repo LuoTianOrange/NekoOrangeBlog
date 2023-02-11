@@ -59,6 +59,11 @@
     height: 50px;
     -webkit-appearance:none;
     -moz-appearance: none;
+    outline:0;
+    font-size:16px;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
 }
 .sch-search-png{
     position: absolute;
