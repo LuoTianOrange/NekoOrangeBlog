@@ -43,6 +43,44 @@
         };
         // gotoTop();
     </script>
+    // 在这里对marked框架进行引用
+    <script src="https://unpkg.com/marked@4.0.13/lib/marked.umd.js"></script>
+    // 在这里编写AJAX代码
+    <script>
+        function showMarkdown()
+        {
+            // 获取表单变量
+            var f=form;
+            // 创建XMLHttpRequest对象
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+
+            // 得到服务器响应后，对得到的Markdown文档进行解析
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    // 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
+                    document.getElementById("content").innerHTML=marked.parse(xmlhttp.responseText);
+                }
+            }
+
+
+            // 向服务器发送请求，获取你需要的Markdown文档
+            xmlhttp.open("GET",f.q.value,true);
+            xmlhttp.send();
+        }
+    </script>
     <style>
         .footer1{
             display: flex;
@@ -87,10 +125,7 @@
             <img src="BOX/Photo/图片.png" height="25" width="25" alt="图片">
             <a href="Gallery.html">图库</a>
         </div>
-        <a class="header-bar-right" href="https://github.com/LuoTianOrange" target="_blank">
-            <img src="BOX/Photo/github.png" height="30" width="30" alt="GithubLogo">
-            Github
-        </a>
+        <a href="Search.html" class="header-bar-right"><img src="BOX/Photo/搜索.png" height="25" alt="搜索"></a>
     </div>
 </div>
 <div class="sto-main">
@@ -161,7 +196,13 @@
     <div class="sto-main-right">
         <div class="right-top"></div>
         <div class="sto-main-headbox">
-
+            <form name="form" action="" method="post">
+                <select name="q">
+                    <option class="active" alue="">选择一个笔记:</option>
+                    <option value="README.md">README.md</option>
+                </select>
+                <input type="button" value="显示" onclick="showMarkdown()">
+            </form>
         </div>
     </div>
 </div>

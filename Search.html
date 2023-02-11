@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
+    <link rel="stylesheet" href="BOX/CSS/Main1.css">
+    <link rel="stylesheet" href="BOX/CSS/Sch-css.css">
+    <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <meta name="description" content="灯火橘的博客,记录学习与生活">
+    <script src="BOX/JS/live2d_js/jquery-3.4.1.min.js"></script>
+    <style>
+        .Search-header {
+            height: 30px;
+
+            /*固定头部导航*/
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            /*width: 100%;*/
+            justify-content: flex-start;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+        }
+
+    </style>
+</head>
+<body>
+<div class="Search-header">
+    <div class="header-bar">
+        <img src="BOX/Photo/橘橘博客.png" height="28" width="120" alt="LOGO">
+        <div class="img-text-group">
+            <img src="BOX/Photo/首页.png" height="30" width="30" alt="首页">
+            <a href="index.html">首页</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/仓库.png" height="25" width="25" alt="仓库">
+            <a href="Store.html">仓库</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/人像.png" height="25" width="25" alt="人像">
+            <a href="Reg.html">用户</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/爱心.png" height="25" width="25" alt="爱心">
+            <a href="Donate.html">捐助</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/链接.png" height="25" width="25" alt="链接">
+            <a href="Link.html">友链</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/图片.png" height="25" width="25" alt="图片">
+            <a href="Gallery.html">图库</a>
+        </div>
+        <a href="Search.html" class="header-bar-right"><img src="BOX/Photo/搜索.png" height="25" alt="搜索"></a>
+    </div>
+</div>
+<div class="content">
+    <div class="sch-main">
+        <div class="sch-main-block sch-main-block2">
+            <h1>全局搜索</h1>
+            <form class="sch-form">
+                <input maxlength="50" placeholder="今天想搜什么呢" class="sch-input-text">
+                <img src="BOX/Photo/搜索.png" class="sch-search-png" width="25" height="25">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function gotoTop(minHeight) {
+
+        // 定义点击返回顶部图标后向上滚动的动画
+        $("#gotoTop").click(
+            function () {
+                $('html,body').animate({scrollTop: '0px'}, 'slow');
+            })
+
+        // 获取页面的最小高度，无传入值则默认为600像素
+        minHeight ? minHeight = minHeight : minHeight = 300;
+
+        // 为窗口的scroll事件绑定处理函数
+        $(window).scroll(function () {
+
+            // 获取窗口的滚动条的垂直滚动距离
+            var s = $(window).scrollTop();
+
+            // 当窗口的滚动条的垂直距离大于页面的最小高度时，让返回顶部图标渐现，否则渐隐
+            if (s > minHeight) {
+                $("#gotoTop").fadeIn(500);
+            } else {
+                $("#gotoTop").fadeOut(500);
+            }
+            ;
+        });
+    };
+    gotoTop();
+</script>
+</body>
+</html>

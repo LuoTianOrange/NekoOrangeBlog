@@ -52,7 +52,12 @@ a:hover {
     display: flex;
     align-items: center;
 }
-
+.header-bar-right2 {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
 .content {
     display: flex;
     flex-direction: row;

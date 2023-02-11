@@ -1,0 +1,67 @@
+.sch-main{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+/*屏幕宽度大于1000px*/
+@media screen and (min-width: 1000px){
+    .sch-main-block2{
+        min-height: 260px;
+        min-width: 990px;
+        position: relative;
+        top: 120px;
+        border-radius: 12px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2%;
+    }
+
+}
+/*屏幕宽度在500-1000之间*/
+@media screen and (min-width: 500px) and (max-width: 1000px){
+    .sch-main-block{
+        min-height: 260px;
+        /*min-width: 990px;*/
+        min-width: 770px;
+        position: relative;
+        top: 120px;
+        border-radius: 12px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2%;
+    }
+}
+
+
+.sch-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+.sch-input-text{
+    width: 80%;
+    height: 50px;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+}
+.sch-search-png{
+    position: absolute;
+    top: 17px;
+    right: 113px;
+}
