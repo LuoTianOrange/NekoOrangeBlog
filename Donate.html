@@ -43,9 +43,39 @@
         }
 
     </script>
+    <style>
+        .header2 {
+            height: 30px;
+
+            /*固定头部导航*/
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            /*width: 100%;*/
+            justify-content: flex-start;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+        }
+        .footer2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            /*width: 100%;*/
+            padding: 20px;
+            margin-top: 30px;
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-<div class="header">
+<div class="header2">
     <div class="header-bar">
         <img src="BOX/Photo/橘橘博客.png" height="28" width="120" alt="LOGO">
         <div class="img-text-group">
@@ -88,7 +118,7 @@
         </div>
     </div>
 </div>
-<div class="footer">
+<div class="footer2">
     <div class="footer-left">
         <div class="bottom-logo">
             <img src="BOX/Photo/灯火橘logo.png" width="80%">
