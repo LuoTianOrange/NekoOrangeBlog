@@ -196,13 +196,15 @@
     <div class="sto-main-right">
         <div class="right-top"></div>
         <div class="sto-main-headbox">
-            <form name="form" action="" method="post">
+            <form name="form" action="" method="post" class="sto-form">
                 <select name="q">
                     <option class="active" alue="">选择一个笔记:</option>
                     <option value="README.md">README.md</option>
+                    <option value="Page/python期末复习笔记.md">python期末复习笔记.md</option>
                 </select>
                 <input type="button" value="显示" onclick="showMarkdown()">
             </form>
+            <div id="content" class="sto-content"></div>
         </div>
     </div>
 </div>
