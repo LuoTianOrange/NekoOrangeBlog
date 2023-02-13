@@ -68,8 +68,8 @@
     margin-left: 20px;
 }
 .button-under{
-    position: absolute;
-    bottom: 15px;
+    position: relative;
+    bottom: 0px;
 }
 .vrc-1{
     background-image: url("https://api.vrchat.cloud/api/1/image/file_1c823ae0-a18c-4392-a93d-2be0ebe24588/1/256");

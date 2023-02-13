@@ -243,7 +243,7 @@ a {
 .body1 {
     position: relative;
     width: 100%;
-    height: 2400px;
+    min-height: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -354,7 +354,7 @@ a {
 
 .main-page {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -362,7 +362,7 @@ a {
 
 .main-page-left {
     width: 250px;
-    height: 100%;
+    min-height: 100%;
     background-color: white;
     border-radius: 6px 0 0 6px;
     border: 1px #e2e2e2;
@@ -370,19 +370,33 @@ a {
 }
 
 .main-page-right {
-    height: 100%;
+    min-height: 100%;
     width: 1000px;
     background-color: white;
     border-radius: 0 6px 6px 0;
 }
-.head-box{
-    margin-top: 83px;
-    width: 1250px;
-    height: 222px;
-    background: white;
-    box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
-    border-radius: 6px;
-    overflow: hidden;
+@media screen and (min-width: 1000px){
+    .head-box{
+        margin-top: 83px;
+        min-width: 1250px;
+        height: 222px;
+        background: white;
+        box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+}
+/*屏幕宽度在500-1000之间*/
+@media screen and (min-width: 500px) and (max-width: 1000px){
+    .head-box-2{
+        margin-top: 83px;
+        min-width: 940px;
+        height: 222px;
+        background: white;
+        box-shadow: 0 0 15px -3px rgb(0 0 0 / 10%);
+        border-radius: 6px;
+        overflow: hidden;
+    }
 }
 .list{
     padding: 0 20px;
@@ -403,10 +417,18 @@ a {
     align-items: center;
     border: 1px #e2e2e2;
     border-bottom-style: solid;
-
+}
+.list-item-none{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px 0;
+    align-items: center;
 }
 .list-button{
-    width: 960px;
+    min-width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;

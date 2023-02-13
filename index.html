@@ -27,7 +27,46 @@
     <!--    <script src = "../BOX/JS/live2d_js/charData.js"></script>-->
     <script src="BOX/JS/live2d_js/l2d.js"></script>
     <script src="BOX/JS/live2d_js/main.js"></script>
+    <script src="https://unpkg.com/marked@4.0.13/lib/marked.umd.js"></script>
+    <script>
+        function showMarkdown()
+        {
+            // 获取表单变量
+            var f=form;
+            // 创建XMLHttpRequest对象
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
 
+
+            // 得到服务器响应后，对得到的Markdown文档进行解析
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    // 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
+                    document.getElementById("content").innerHTML=marked.parse(xmlhttp.responseText);
+                }
+            }
+
+
+            // 向服务器发送请求，获取你需要的Markdown文档
+            xmlhttp.open("GET",f.q.value,true);
+            xmlhttp.send();
+
+        }
+        window.onload=function (){
+            showMarkdown()
+        }
+    </script>
     <style>
         .header2 {
             height: 30px;
@@ -127,8 +166,8 @@
         </div>
         <div class="right-info-block">
             <h3>备忘录</h3>
-            <ol class="memo-list">
-                <li>白猫 帮改VRC模型</li>
+            <ol class="memo-list" id="content">
+<!--                <li>白猫 帮改VRC模型</li>-->
             </ol>
         </div>
         <div class="right-info-music">
@@ -186,6 +225,11 @@
     </div>
 </div>
 <div class="background"></div>
+<form name="form"style="display: none">
+    <select name="q">
+        <option value="Page/备忘录.md">备忘录</option>
+    </select>
+</form><!--备忘录内容-->
 <script>
     function gotoTop(minHeight) {
 
