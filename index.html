@@ -67,6 +67,30 @@
             showMarkdown()
         }
     </script>
+        <script>
+            const images = [
+                "BOX/Photo/nacho.png",
+                "BOX/Photo/nacho2.png",
+                "BOX/Photo/nacho3.png",
+                "BOX/Photo/nacho4.png",
+            ];
+
+            function setRandomBackgroundImage() {
+                let dom_item = document.getElementById('background');
+                dom_item.style.opacity = '0';
+                setTimeout(() => {
+                    let randomImageNumber = Math.floor(Math.random() * images.length);
+                    dom_item.style.backgroundImage = `url("${images[randomImageNumber]}")`;
+                    dom_item.style.opacity = '40%';
+                }, 1000);
+            }
+
+            window.onload = () => {
+                setInterval(() => {
+                    setRandomBackgroundImage();
+                }, 15000);
+            }
+        </script>
     <style>
         .header2 {
             height: 30px;
@@ -224,7 +248,7 @@
         </div>
     </div>
 </div>
-<div class="background"></div>
+<div class="background" id="background"></div>
 <form name="form"style="display: none">
     <select name="q">
         <option value="Page/备忘录.md">备忘录</option>
