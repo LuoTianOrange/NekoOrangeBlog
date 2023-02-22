@@ -29,83 +29,71 @@
     <script src="BOX/JS/live2d_js/main.js"></script>
     <script src="https://unpkg.com/marked@4.0.13/lib/marked.umd.js"></script>
     <script>
-        function showMarkdown()
-        {
+        const images = [
+            "BOX/Photo/nacho.png",
+            "BOX/Photo/nacho2.png",
+            "BOX/Photo/nacho3.png",
+            "BOX/Photo/nacho4.png",
+        ];
+
+        function showMarkdown() {
             // 获取表单变量
-            var f=form;
+            var f = form;
             // 创建XMLHttpRequest对象
             var xmlhttp;
-            if (window.XMLHttpRequest)
-            {
+            if (window.XMLHttpRequest) {
                 // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {
+                xmlhttp = new XMLHttpRequest();
+            } else {
                 // IE6, IE5 浏览器执行代码
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
 
 
             // 得到服务器响应后，对得到的Markdown文档进行解析
-            xmlhttp.onreadystatechange=function()
-            {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                     // 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
-                    document.getElementById("content").innerHTML=marked.parse(xmlhttp.responseText);
+                    document.getElementById("content").innerHTML = marked.parse(xmlhttp.responseText);
                 }
             }
 
 
             // 向服务器发送请求，获取你需要的Markdown文档
-            xmlhttp.open("GET",f.q.value,true);
+            xmlhttp.open("GET", f.q.value, true);
             xmlhttp.send();
 
         }
-        window.onload=function (){
+
+        function setRandomBackgroundImage() {
+            let dom_item = document.getElementById('background');
+            dom_item.style.opacity = '0';
+            setTimeout(() => {
+                let randomImageNumber = Math.floor(Math.random() * images.length);
+                dom_item.style.backgroundImage = `url("${images[randomImageNumber]}")`;
+                dom_item.style.opacity = '40%';
+            }, 1000);
+        }
+
+        window.onload = function () {
             showMarkdown()
             setRandomBackgroundImage()
         }
     </script>
-    <script>
-        var images = [
-            "BOX/Photo/nacho.png",
-            // "BOX/Photo/nacho2.png",
-            // "BOX/Photo/nacho3.png",
-            // "BOX/Photo/nacho4.png",
-        ];
+    <!--    <script>-->
+    <!--        var images = [-->
+    <!--            "BOX/Photo/nacho.png",-->
+    <!--            // "BOX/Photo/nacho2.png",-->
+    <!--            // "BOX/Photo/nacho3.png",-->
+    <!--            // "BOX/Photo/nacho4.png",-->
+    <!--        ];-->
 
-        function setRandomBackgroundImage() {
-            let randomImageNumber = Math.floor(Math.random() * images.length);
-            document.getElementById('background').style.backgroundImage = "url(" + images[randomImageNumber] + ")";
-            document.getElementById('background').classList.add('background-transition');
-        }
-    </script>
-        <script>
-            const images = [
-                "BOX/Photo/nacho.png",
-                "BOX/Photo/nacho2.png",
-                "BOX/Photo/nacho3.png",
-                "BOX/Photo/nacho4.png",
-            ];
-
-            function setRandomBackgroundImage() {
-                let dom_item = document.getElementById('background');
-                dom_item.style.opacity = '0';
-                setTimeout(() => {
-                    let randomImageNumber = Math.floor(Math.random() * images.length);
-                    dom_item.style.backgroundImage = `url("${images[randomImageNumber]}")`;
-                    dom_item.style.opacity = '40%';
-                }, 1000);
-            }
-
-            window.onload = () => {
-                setInterval(() => {
-                    setRandomBackgroundImage();
-                }, 2000);
-            }
-        </script>
+    <!--        function setRandomBackgroundImage() {-->
+    <!--            let randomImageNumber = Math.floor(Math.random() * images.length);-->
+    <!--            document.getElementById('background').style.backgroundImage = "url(" + images[randomImageNumber] + ")";-->
+    <!--            document.getElementById('background').classList.add('background-transition');-->
+    <!--        }-->
+    <!--    </script>-->
     <style>
         .header2 {
             height: 30px;
@@ -124,6 +112,7 @@
             background-color: white;
             box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
         }
+
         .footer2 {
             display: flex;
             flex-direction: row;
@@ -206,7 +195,7 @@
         <div class="right-info-block">
             <h3>备忘录</h3>
             <ol class="memo-list" id="content">
-<!--                <li>白猫 帮改VRC模型</li>-->
+                <!--                <li>白猫 帮改VRC模型</li>-->
             </ol>
         </div>
         <div class="right-info-music">
