@@ -65,24 +65,23 @@
         }
         window.onload=function (){
             showMarkdown()
+            setRandomBackgroundImage()
         }
     </script>
-        <script>
-            var images = [
-                "BOX/Photo/nacho.png",
-                // "BOX/Photo/nacho2.png",
-                // "BOX/Photo/nacho3.png",
-                // "BOX/Photo/nacho4.png",
-            ];
+    <script>
+        var images = [
+            "BOX/Photo/nacho.png",
+            // "BOX/Photo/nacho2.png",
+            // "BOX/Photo/nacho3.png",
+            // "BOX/Photo/nacho4.png",
+        ];
 
-            function setRandomBackgroundImage() {
-                let randomImageNumber = Math.floor(Math.random() * images.length);
-                document.getElementById('background').style.backgroundImage = "url(" + images[randomImageNumber] + ")";
-                document.getElementById('background').classList.add('background-transition');
-            }
-
-            window.onload = setRandomBackgroundImage;
-        </script>
+        function setRandomBackgroundImage() {
+            let randomImageNumber = Math.floor(Math.random() * images.length);
+            document.getElementById('background').style.backgroundImage = "url(" + images[randomImageNumber] + ")";
+            document.getElementById('background').classList.add('background-transition');
+        }
+    </script>
     <style>
         .header2 {
             height: 30px;
