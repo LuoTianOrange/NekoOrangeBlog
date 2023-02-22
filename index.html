@@ -65,6 +65,21 @@
         }
         window.onload=function (){
             showMarkdown()
+            setRandomBackgroundImage()
+        }
+    </script>
+    <script>
+        var images = [
+            "BOX/Photo/nacho.png",
+            // "BOX/Photo/nacho2.png",
+            // "BOX/Photo/nacho3.png",
+            // "BOX/Photo/nacho4.png",
+        ];
+
+        function setRandomBackgroundImage() {
+            let randomImageNumber = Math.floor(Math.random() * images.length);
+            document.getElementById('background').style.backgroundImage = "url(" + images[randomImageNumber] + ")";
+            document.getElementById('background').classList.add('background-transition');
         }
     </script>
         <script>
@@ -249,7 +264,8 @@
     </div>
 </div>
 <div class="background" id="background"></div>
-<form name="form"style="display: none">
+
+<form name="form" style="display: none">
     <select name="q">
         <option value="Page/备忘录.md">备忘录</option>
     </select>
