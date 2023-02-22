@@ -177,6 +177,11 @@ a:hover {
     top: 0;
     opacity: 40%;
 }
+.background-transition {
+    /* 过渡动画设置 */
+    transition: opacity 0s linear;
+}
+
 .a1{
     display: flex;
     justify-content: center;

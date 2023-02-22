@@ -43,6 +43,20 @@
         };
         // gotoTop();
     </script>
+<!--    <script>-->
+<!--        var images = [-->
+<!--            "image1.jpg",-->
+<!--            "image2.jpg",-->
+<!--            "image3.jpg",-->
+<!--        ];-->
+
+<!--        function setRandomBackgroundImage() {-->
+<!--            let randomImageNumber = Math.floor(Math.random() * images.length);-->
+<!--            document.getElementById('background').style.backgroundImage = "url(" + images[randomImageNumber] + ")";-->
+<!--        }-->
+
+<!--        window.onload = setRandomBackgroundImage;-->
+<!--    </script>-->
 </head>
 <body>
 <div class="header">
@@ -643,7 +657,7 @@
             <div class="list" id="web-list" style="display: none">
                 <div class="list-item">
                     <a href="https://blog.shiinafan.top/" target="_blank">
-                        <img src="BOX/Photo/Shiina的博客.bmp" width="70" class="rad"></a>
+                        <img src="https://blog.shiinafan.top/avatar/avatar2.jpg" width="70" class="rad"></a>
                     <div class="content">
                         <a href="https://blog.shiinafan.top/" target="_blank">
                             <div class="all-pink-name">Shiina的博客</div>
@@ -674,8 +688,19 @@
                     </div>
                 </div>
                 <div class="list-item">
+                    <a href="https://cwlrin.wiki/" target="_blank">
+                        <img src="https://cwlrin.wiki/wp-content/uploads/2023/02/2023.png"
+                             width="70" class="rad"></a>
+                    <div class="content">
+                        <a href="https://cwlrin.wiki/" target="_blank">
+                            <div class="all-pink-name">七叶的博客</div>
+                            <div class="all-text-1 text-upon">https://cwlrin.wiki/</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
                     <a href="https://github.com/sena-nana" target="_blank">
-                        <img src="https://i1.hdslb.com/bfs/face/5d41583527fcaf9a1993f998c600a44e4420bb11.jpg@96w_96h_1c.webp"
+                        <img src="//i1.hdslb.com/bfs/face/5d41583527fcaf9a1993f998c600a44e4420bb11.jpg@96w_96h_1c.webp"
                              width="70" class="rad"></a>
                     <div class="content">
                         <a href="https://github.com/sena-nana" target="_blank">
@@ -684,7 +709,6 @@
                         </a>
                     </div>
                 </div>
-                <div class="list-item-none"></div>
                 <div class="list-item-none"></div>
                 <div class="list-item-none"></div>
                 <div class="list-item-none"></div>
@@ -735,6 +759,6 @@
         </div>
     </div>
 </div>
-<div class="background"></div>
+<div class="background" id="background"></div>
 </body>
 </html>
