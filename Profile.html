@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>捐助</title>
+    <title>简介</title>
     <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
     <link rel="stylesheet" href="BOX/CSS/Main1.css">
-    <link rel="stylesheet" href="BOX/CSS/Donate-css.css">
+    <link rel="stylesheet" href="BOX/CSS/Profile-css.css">
     <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
     <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
     <meta name="description" content="灯火橘的博客,记录学习与生活">
     <script>
         //留言板
         //1、获取元素
-        window.onload = () =>{
+        window.onload = () => {
             var txt = document.getElementById('text-area');
             var btn = document.getElementById('submit-button');
             var ul = document.getElementById('sub-list');
@@ -61,6 +61,7 @@
             background-color: white;
             box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
         }
+
         .footer2 {
             display: flex;
             flex-direction: row;
@@ -92,7 +93,7 @@
         </div>
         <div class="img-text-group">
             <img src="BOX/Photo/爱心.png" height="25" width="25" alt="爱心">
-            <a href="Donate.html">捐助</a>
+            <a href="Profile.html">简介</a>
         </div>
         <div class="img-text-group">
             <img src="BOX/Photo/链接.png" height="25" width="25" alt="链接">
@@ -106,16 +107,8 @@
     </div>
 </div>
 <div class="content">
-    <div class="de-body">
-        <div class="de-body-block">
-            <div class="text-box">
-                <h2>留言板</h2>
-                <h4>非永久，暂未实现</h4>
-                <textarea id="text-area"></textarea>
-                <button id="submit-button">发布</button>
-                <ul id="sub-list"></ul>
-            </div>
-        </div>
+    <div class="pre-body">
+        <div class="pre-min-body"></div>
     </div>
 </div>
 <div class="footer2">

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuetest</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="BOX/Photo/favicon.ico">
+        <link rel="stylesheet" href="BOX/CSS/Main1.css">
+        <link rel="stylesheet" href="BOX/CSS/Sch-css.css">
+    <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <meta name="description" content="灯火橘的博客,记录学习与生活">
+<!--    <script src="BOX/JS/vue.js"></script>-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <style>
+        /*.main {*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*}*/
+
+        /*.main-page {*/
+        /*    max-width: 100%;*/
+        /*    min-height: 100%;*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    align-items: center;*/
+        /*    justify-content: flex-start;*/
+        /*}*/
+
+        .main-box-1 {
+            width: 400px;
+            height: 300px;
+            background: white;
+            border-radius: 12px;
+            opacity: 0.8;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-bar">
+        <img src="BOX/Photo/橘橘博客.png" height="28" width="120" alt="LOGO">
+        <div class="img-text-group">
+            <img src="BOX/Photo/首页.png" height="30" width="30" alt="首页">
+            <a href="index.html">首页</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/仓库.png" height="25" width="25" alt="仓库">
+            <a href="Store.html">仓库</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/人像.png" height="25" width="25" alt="人像">
+            <a href="Reg.html">用户</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/爱心.png" height="25" width="25" alt="爱心">
+            <a href="Profile.html">简介</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/链接.png" height="25" width="25" alt="链接">
+            <a href="Link.html">友链</a>
+        </div>
+        <div class="img-text-group">
+            <img src="BOX/Photo/图片.png" height="25" width="25" alt="图片">
+            <a href="Gallery.html">图库</a>
+        </div>
+        <a href="Search.html" class="header-bar-right"><img src="BOX/Photo/搜索.png" height="25" alt="搜索"></a>
+    </div>
+</div>
+<div class="main">
+    <div class="main-page">
+        <div class="main-box-1">
+            <div id="app">
+                <p>用户您好！</p>
+                <ul>
+                    <li>姓名：{{name}}</li>
+                    <li>城市：{{city}}</li>
+                </ul>
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <h1 class="text-center mb-3">Vue Calculator</h1>
+                            <div class="card">
+                                <div class="card-body">
+                                    <input type="text" v-model="n1" class="form-control mb-2">
+                                    <input type="button" value="+" @click="setOperator" class="btn btn-primary mx-2">
+                                    <input type="button" value="-" @click="setOperator" class="btn btn-primary mx-2">
+                                    <input type="button" value="*" @click="setOperator" class="btn btn-primary mx-2">
+                                    <input type="button" value="/" @click="setOperator" class="btn btn-primary mx-2">
+                                    <input type="text" v-model="n2" class="form-control mb-2">
+                                    <input type="button" value="=" @click="calculate" class="btn btn-success mx-2">
+                                    <input type="button" value="C" @click="clear" class="btn btn-danger mx-2">
+                                    <h2 class="text-center">Result: {{total}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    //创建实例
+
+    let user = {
+        name : "Chance",
+        city : "Beijing",
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: user
+    })
+
+</script>
+</html>
