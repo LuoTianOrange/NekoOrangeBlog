@@ -91,15 +91,13 @@
 .ph-main-page{
     height: 94%;
     position: relative;
-    top: 40px;
+    top: 20px;
     width: 1000px;
     background-color: white;
     border-radius: 6px;
 }
 .ph2-body{
-    position: relative;
     width: 100%;
-    height: 6300px;
     display: flex;
     flex-direction: column;
     align-items: center;
