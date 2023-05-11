@@ -9,40 +9,7 @@
     <meta name="referrer" content="no-referrer"/><!--针对图片的防盗链-->
     <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
     <meta name="description" content="灯火橘的博客,记录学习与生活">
-    <script>
-        //留言板
-        //1、获取元素
-        window.onload = () => {
-            var txt = document.getElementById('text-area');
-            var btn = document.getElementById('submit-button');
-            var ul = document.getElementById('sub-list');
-            //2、给button绑定点击事件
-            btn.onclick = function () {
-                if (txt.value == "") {//当文本框中没有文字时，提示
-                    alert("您没有输入内容")
-                } else {
-                    //创建元素li作为留言区
-                    var li = document.createElement("li");
-                    //将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
-                    li.innerHTML = txt.value + "<a href='javascript:;'>删除</a>"
-                    txt.value = "";//添加之后文本框的内容清空
-                    //将留言添加到ul中，而且在最上方
-                    ul.insertBefore(li, ul.children[0]);
-                    //当点击删除时删除ul中的li
-                    var as = document.querySelectorAll("a");
-                    //循环给每个删除绑定事件
-                    for (var i = 0; i < as.length; i++) {
-                        as[i].onclick = function () {
-                            //删除当前a标签所在位置的父节点li
-                            ul.removeChild(this.parentNode);
-                        }
-                    }
-                }
-            }
-            //blog.csdn.net/m0_46612221/article/details/121455005
-        }
-
-    </script>
+    <script src="BOX/JS/vue.js"></script>
     <style>
         .header2 {
             height: 30px;
@@ -76,82 +43,118 @@
     </style>
 </head>
 <body>
-<div class="header2">
-    <div class="header-bar">
-        <img src="BOX/Photo/橘橘博客.png" height="28" width="120" alt="LOGO">
-        <div class="img-text-group">
-            <img src="BOX/Photo/首页.png" height="30" width="30" alt="首页">
-            <a href="index.html">首页</a>
+<div id="app">
+    <div class="header2">
+        <div class="header-bar">
+            <img src="BOX/Photo/橘橘博客.png" height="28" width="120" alt="LOGO">
+            <div class="img-text-group">
+                <img src="BOX/Photo/首页.png" height="30" width="30" alt="首页">
+                <a href="index.html">首页</a>
+            </div>
+            <div class="img-text-group">
+                <img src="BOX/Photo/仓库.png" height="25" width="25" alt="仓库">
+                <a href="Store.html">仓库</a>
+            </div>
+            <div class="img-text-group">
+                <img src="BOX/Photo/人像.png" height="25" width="25" alt="人像">
+                <a href="Reg.html">用户</a>
+            </div>
+            <div class="img-text-group">
+                <img src="BOX/Photo/爱心.png" height="25" width="25" alt="爱心">
+                <a href="Profile.html">简介</a>
+            </div>
+            <div class="img-text-group">
+                <img src="BOX/Photo/链接.png" height="25" width="25" alt="链接">
+                <a href="Link.html">友链</a>
+            </div>
+            <div class="img-text-group">
+                <img src="BOX/Photo/图片.png" height="25" width="25" alt="图片">
+                <a href="Gallery.html">图库</a>
+            </div>
+            <a href="Search.html" class="header-bar-right"><img src="BOX/Photo/搜索.png" height="25" alt="搜索"></a>
         </div>
-        <div class="img-text-group">
-            <img src="BOX/Photo/仓库.png" height="25" width="25" alt="仓库">
-            <a href="Store.html">仓库</a>
-        </div>
-        <div class="img-text-group">
-            <img src="BOX/Photo/人像.png" height="25" width="25" alt="人像">
-            <a href="Reg.html">用户</a>
-        </div>
-        <div class="img-text-group">
-            <img src="BOX/Photo/爱心.png" height="25" width="25" alt="爱心">
-            <a href="Profile.html">简介</a>
-        </div>
-        <div class="img-text-group">
-            <img src="BOX/Photo/链接.png" height="25" width="25" alt="链接">
-            <a href="Link.html">友链</a>
-        </div>
-        <div class="img-text-group">
-            <img src="BOX/Photo/图片.png" height="25" width="25" alt="图片">
-            <a href="Gallery.html">图库</a>
-        </div>
-        <a href="Search.html" class="header-bar-right"><img src="BOX/Photo/搜索.png" height="25" alt="搜索"></a>
     </div>
-</div>
-<div class="content">
-    <div class="pre-body">
-        <div class="pre-min-body"></div>
+    <div class="content">
+        <div class="pre-body">
+            <div class="pre-main-body">
+                <div class="pre-main">
+                    <div class="mar-left-and-right">
+                        <cat-box v-for="item in list" :key="item.no">{{item.ide}}</cat-box>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="footer2">
-    <div class="footer-left">
-        <div class="bottom-logo">
-            <img src="BOX/Photo/灯火橘logo.png" width="80%">
-        </div>
-        <div class="footer-link">
-            <div class="footer-link-title">个人主页</div>
-            <br>
-            <div class="footer-link-content"><a href="https://space.bilibili.com/32256434" class="a1 text-center"
-                                                target="_blank"><img src="BOX/Photo/哔哩哔哩动画1.png" height="20px">&nbsp;
-                B站</a></div>
-            <div class="footer-link-content"><a href="https://raitoorangecat.booth.pm/" class="a1 text-center"
-                                                target="_blank"><img
-                    src="BOX/Photo/BOOTH1.png" height="20px" class="rad">&nbsp; BOOTH</a></div>
-            <div class="footer-link-content"><a href="https://www.mcbbs.net/?1902195" class="a1 text-center"
-                                                target="_blank"><img
-                    src="BOX/Photo/MCBBS.ico" height="20px" class="rad">&nbsp; MCBBS</a></div>
-            <div class="footer-link-content"><a href="https://zh.moegirl.org.cn/%E7%81%AF%E7%81%AB%E6%A9%98"
-                                                class="a1 text-center"
-                                                target="_blank"><img src="BOX/Photo/萌娘百科.ico" height="20px"
-                                                                     class="rad">&nbsp; 萌娘百科</a></div>
-            <div class="footer-link-content"><a href="https://center.mcmod.cn/33311/" class="a1 text-center"
-                                                target="_blank"><img
-                    src="BOX/Photo/MC百科.ico" height="20px" class="rad">&nbsp; MC百科</a></div>
-        </div>
-        <div class="footer-link"><br>
-            <div class="footer-link-content"><a href="https://www.acfun.cn/u/59861334" class="a1 text-center"
-                                                target="_blank"><img
-                    src="BOX/Photo/ACFUN.ico" height="20px" class="rad">&nbsp; A站</a></div>
-            <div class="footer-link-content"><a href="https://github.com/LuoTianOrange" class="a1 text-center"
-                                                target="_blank"><img
-                    src="BOX/Photo/github.png" height="20px" class="rad">&nbsp; Github</a></div>
-            <div class="footer-link-content"><a
-                    href="https://vrchat.com/home/worlds/wrld_72f18c9e-898a-4618-b069-a992abfd6c26"
-                    class="a1 text-center"
-                    target="_blank"><img src="https://assets.vrchat.com/www/favicons/favicon.ico" height="20px">&nbsp;
-                VRChat</a></div>
+    <div class="footer2">
+        <div class="footer-left">
+            <div class="bottom-logo">
+                <img src="BOX/Photo/灯火橘logo.png" width="80%">
+            </div>
+            <div class="footer-link">
+                <div class="footer-link-title">个人主页</div>
+                <br>
+                <div class="footer-link-content"><a href="https://space.bilibili.com/32256434" class="a1 text-center"
+                                                    target="_blank"><img src="BOX/Photo/哔哩哔哩动画1.png"
+                                                                         height="20px">&nbsp;
+                    B站</a></div>
+                <div class="footer-link-content"><a href="https://raitoorangecat.booth.pm/" class="a1 text-center"
+                                                    target="_blank"><img
+                        src="BOX/Photo/BOOTH1.png" height="20px" class="rad">&nbsp; BOOTH</a></div>
+                <div class="footer-link-content"><a href="https://www.mcbbs.net/?1902195" class="a1 text-center"
+                                                    target="_blank"><img
+                        src="BOX/Photo/MCBBS.ico" height="20px" class="rad">&nbsp; MCBBS</a></div>
+                <div class="footer-link-content"><a href="https://zh.moegirl.org.cn/%E7%81%AF%E7%81%AB%E6%A9%98"
+                                                    class="a1 text-center"
+                                                    target="_blank"><img src="BOX/Photo/萌娘百科.ico" height="20px"
+                                                                         class="rad">&nbsp; 萌娘百科</a></div>
+                <div class="footer-link-content"><a href="https://center.mcmod.cn/33311/" class="a1 text-center"
+                                                    target="_blank"><img
+                        src="BOX/Photo/MC百科.ico" height="20px" class="rad">&nbsp; MC百科</a></div>
+            </div>
+            <div class="footer-link"><br>
+                <div class="footer-link-content"><a href="https://www.acfun.cn/u/59861334" class="a1 text-center"
+                                                    target="_blank"><img
+                        src="BOX/Photo/ACFUN.ico" height="20px" class="rad">&nbsp; A站</a></div>
+                <div class="footer-link-content"><a href="https://github.com/LuoTianOrange" class="a1 text-center"
+                                                    target="_blank"><img
+                        src="BOX/Photo/github.png" height="20px" class="rad">&nbsp; Github</a></div>
+                <div class="footer-link-content"><a
+                        href="https://vrchat.com/home/worlds/wrld_72f18c9e-898a-4618-b069-a992abfd6c26"
+                        class="a1 text-center"
+                        target="_blank"><img src="https://assets.vrchat.com/www/favicons/favicon.ico" height="20px">&nbsp;
+                    VRChat</a></div>
 
+            </div>
         </div>
     </div>
+    <div class="background"></div>
 </div>
-<div class="background"></div>
+<template id="tmp1">
+    <div>
+        <div class="cat-box">
+            <span style="color: #00a1d6"></span>
+        </div>
+    </div>
+</template>
+<script>
+    Vue.component('cat-box', {
+        data() {
+            return {};
+        },
+        template: document.getElementById("tmp1")
+    })
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            list: [//介绍的内容
+                {no: 1, ide: 'test111111'},
+                {no: 2, ide: 'test111111'}
+            ]
+        },
+        method: {}
+    })
+</script>
 </body>
 </html>
